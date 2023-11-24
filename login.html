@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="./bootstrap-5.3.2-dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <!-- Phần nav -->
+    <header class="p-3 text-bg-dark">
+      <div class="container">
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+        >
+          <a
+            href="/"
+            class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
+          >
+            <img src="./img/logo.png" alt="logo" />
+          </a>
+
+          <ul
+            class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+          >
+            <li><a href="#" class="nav-link px-2 text-white">Trang Chủ</a></li>
+            <li><a href="#" class="nav-link px-2 text-white">Thể loại</a></li>
+            <li><a href="#" class="nav-link px-2 text-white">Yêu Thích</a></li>
+            <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+          </ul>
+
+          <span class="me-2">Tìm Kiếm</span>
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+            <input
+              type="search"
+              class="form-control form-control-dark text-bg-dark"
+              id="tim-kiem"
+              placeholder="Search..."
+              aria-label="Search"
+            />
+          </form>
+
+          <div class="text-end">
+            <button type="button" class="btn btn-outline-light me-2">
+              Đăng Nhập
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--phần login-->
+    <div class="container-login">
+      <div class="login-header">
+        <div class="login-header-left">
+          <p>Đăng nhập thành viên</p>
+        </div>
+        <div class="login-header-right"></div>
+      </div>
+      <div class="container-login-main">
+        <div class="login">
+          <div>
+            <h6>Email</h6>
+            <input
+              type="email"
+              style="color: white; padding-left: 20px"
+              placeholder="Nhập email của bạn"
+            />
+            <div>
+              <h6>Mật khẩu</h6>
+              <input
+                style="color: white; padding-left: 20px"
+                type="password"
+                placeholder="Nhập mật khẩu của bạn"
+              />
+            </div>
+          </div>
+          <div class="btn-group">
+            <div>
+              <button class="login-btn">Đăng nhập</button>
+              <a style="color: white; text-decoration: none" href="#"
+                >Quên mật khẩu ?</a
+              >
+            </div>
+          </div>
+          <div>
+            <button class="sign-up-btn">Đăng ký</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
