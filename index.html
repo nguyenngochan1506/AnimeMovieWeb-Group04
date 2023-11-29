@@ -4,44 +4,18 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Trang chủ</title>
     <link rel="stylesheet" href="./bootstrap-5.3.2-dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/index.css" />
 </head>
 
 <body class="custom-bg">
     <!-- Phần nav -->
-    <header class="container-fluid p-3 text-bg-dark position-fixed z-3">
-        <div class="container">
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                    <img src="./img/logo.png" alt="logo" />
-                </a>
-
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="index.html" class="nav-link px-2 text-white">Trang Chủ</a></li>
-                    <li><a href="category.html" class="nav-link px-2 text-white">Thể loại</a></li>
-                    <li><a href="fovorite.html" class="nav-link px-2 text-white">Yêu Thích</a></li>
-                    <li><a href="about.html" class="nav-link px-2 text-white">About</a></li>
-                </ul>
-
-                <span class="me-2">Tìm Kiếm</span>
-                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-                    <input type="search" class="form-control form-control-dark text-bg-dark" id="tim-kiem"
-                        placeholder="Search..." aria-label="Search" />
-                </form>
-
-                <div class="text-end">
-                    <a href="login.html" type="button" class="btn btn-outline-light me-2">
-                        Đăng Nhập
-                    </a>
-                </div>
-            </div>
-        </div>
+    <header class="container-fluid p-3 text-bg-dark position-fixed z-3" id="header-include"">
     </header>
 
     <!-- Carousel -->
-    <div class="container my-custom-css">
+    <div class=" container my-custom-css">
         <div id="carouselExampleCaptions" class="carousel slide">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -99,45 +73,24 @@
         <div class="container text-center mt-5">
             <button class="btn btn-outline-danger">Xem Thêm</button>
         </div>
-    </div>
-    <!-- Phần footer -->
-    <div class="container-fluid">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <div class="col-md-4 d-flex align-items-center">
-                <a href="/" class="mb-3 me-2 mb-md-0 text-white text-decoration-none lh-1">
-                    <svg class="bi" width="30" height="24">
-                        <use xlink:href="#bootstrap"></use>
-                    </svg>
-                </a>
-                <span class="mb-3 mb-md-0 text-white">© Nhóm 4 <br> - Web được tạo ra với mục đích học tập, không có
-                    ý định mua bán hay chuộc lợi!</span>
-            </div>
+        </div>
+        <!-- Phần footer -->
+        <div class="container-fluid" id="footer-include">
+            
+        </div>
+        <script>
+            //phần include header and footer
+            const header = document.querySelector('#header-include');
+            const footer = document.querySelector('#footer-include');
+            fetch('nav.html').then(response => response.text()).then(html => header.innerHTML = html)
+            fetch('footer.html').then(response => response.text()).then(html => footer.innerHTML = html)
+        </script>
+        <script>
+            const item = document.querySelector(".my-item");
+            const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3">
-                    <a class="text-white" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#twitter"></use>
-                        </svg></a>
-                </li>
-                <li class="ms-3">
-                    <a class="text-white" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#instagram"></use>
-                        </svg></a>
-                </li>
-                <li class="ms-3">
-                    <a class="text-white" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#facebook"></use>
-                        </svg></a>
-                </li>
-            </ul>
-        </footer>
-    </div>
-    <script>
-        const item = document.querySelector(".my-item");
-        const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-        const html = arr.map(n => {
-            return `
+            const html = arr.map(n => {
+                return `
             <div style="height: 325px; width: 230px;">
             <div class="card" style="
               background-image: url(./img/popular/popular-3.jpg);
@@ -154,10 +107,10 @@
                 </div>
             </div>
              `
-        }).join("")
-        item.innerHTML = html;
-    </script>
-    <script src="./bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+            }).join("")
+            item.innerHTML = html;
+        </script>
+        <script src="./bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

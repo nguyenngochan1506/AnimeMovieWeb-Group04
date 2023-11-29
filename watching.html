@@ -14,7 +14,9 @@
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/watching.css">
 </head>
 
@@ -26,33 +28,7 @@
 
 
     <!-- Phần nav -->
-    <header class="container-fluid p-3 text-bg-dark position-fixed z-3">
-        <div class="container">
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                    <img src="./img/logo.png" alt="logo" />
-                </a>
-
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="index.html" class="nav-link px-2 text-white">Trang Chủ</a></li>
-                    <li><a href="category.html" class="nav-link px-2 text-white">Thể loại</a></li>
-                    <li><a href="fovorite.html" class="nav-link px-2 text-white">Yêu Thích</a></li>
-                    <li><a href="about.html" class="nav-link px-2 text-white">About</a></li>
-                </ul>
-
-                <span class="me-2">Tìm Kiếm</span>
-                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-                    <input type="search" class="form-control form-control-dark text-bg-dark" id="tim-kiem"
-                        placeholder="Search..." aria-label="Search" />
-                </form>
-
-                <div class="text-end">
-                    <a href="login.html" type="button" class="btn btn-outline-light me-2">
-                        Đăng Nhập
-                    </a>
-                </div>
-            </div>
-        </div>
+    <header class="container-fluid p-3 text-bg-dark position-fixed z-3" id="header-include"">
     </header>
     <!-- Header End -->
 
@@ -94,13 +70,15 @@
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen></iframe>
                         <div>
-                            <a class="btn btn-primary my-2 fw-bolder" href="#"><i class="fa-solid fa-lightbulb "></i>Night</a>
+                            <a class="btn btn-primary my-2 fw-bolder" href="#"><i
+                                    class="fa-solid fa-lightbulb "></i>Night</a>
                             <a class="btn btn-primary my-2 fw-bolder" href="#">Tiếp ></a>
                         </div>
 
                         <div class="anime__details__episodes p-3 mb-2 mt-2 rounded " style="background-color: #c4d6f5;">
                             <div class="section-title d-flex flex-row align-items-center">
-                                <i class="fa-regular fa-note-sticky mb-1 p-1" style="color: rgb(248, 73, 73)"></i>   <h5 class="d-flex align-items-start" style="color: rgb(248, 73, 73)  ">Ghi chú : Phim
+                                <i class="fa-regular fa-note-sticky mb-1 p-1" style="color: rgb(248, 73, 73)"></i>
+                                <h5 class="d-flex align-items-start" style="color: rgb(248, 73, 73)  ">Ghi chú : Phim
                                     được cập nhập vào 7h tối thứ 2 và
                                     thứ 5 hàng tuần.</h5>
                             </div>
@@ -145,7 +123,9 @@
                     <div class="rounded text-center mb-2 p-3" style="background-color: #c4d6f5;">
                         <div class=" ">
                             <div class="section-titles d-flex flex-row align-items-center">
-                                <i class="fa-regular fa-comment-dots mb-1 p-1" style="color: rgba(218, 128, 3, 0.845);"></i>  <h4 style="color: rgba(223, 120, 3, 0.9);">Bình luận.</h4>
+                                <i class="fa-regular fa-comment-dots mb-1 p-1"
+                                    style="color: rgba(218, 128, 3, 0.845);"></i>
+                                <h4 style="color: rgba(223, 120, 3, 0.9);">Bình luận.</h4>
                             </div>
                         </div>
                         <div>
@@ -232,40 +212,16 @@
         </div>
     </section>
     <!-- Anime Section End -->
-
-    <!-- Footer Section Begin -->
-    <div class="container-fluid">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <div class="col-md-4 d-flex align-items-center">
-                <a href="/" class="mb-3 me-2 mb-md-0 text-white text-decoration-none lh-1">
-                    <svg class="bi" width="30" height="24">
-                        <use xlink:href="#bootstrap"></use>
-                    </svg>
-                </a>
-                <span class="mb-3 mb-md-0 text-white">© Nhóm 4 <br> - Web được tạo ra với mục đích học tập, không có ý
-                    định mua bán hay chuộc lợi!</span>
-            </div>
-
-            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3">
-                    <a class="text-white" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#twitter"></use>
-                        </svg></a>
-                </li>
-                <li class="ms-3">
-                    <a class="text-white" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#instagram"></use>
-                        </svg></a>
-                </li>
-                <li class="ms-3">
-                    <a class="text-white" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#facebook"></use>
-                        </svg></a>
-                </li>
-            </ul>
-        </footer>
+    <!-- Phần footer -->
+    <div class="container-fluid" id="footer-include">
     </div>
-    <!-- Footer Section End -->
+    <script>
+        //phần include header and footer
+        const header = document.querySelector('#header-include');
+        const footer = document.querySelector('#footer-include');
+        fetch('nav.html').then(response => response.text()).then(html => header.innerHTML = html)
+        fetch('footer.html').then(response => response.text()).then(html => footer.innerHTML = html)
+    </script>
 
     <script>
         const item = document.querySelector(".my-item");
