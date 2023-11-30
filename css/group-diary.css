@@ -1,0 +1,31 @@
+.my-custom-bg{
+    background-color: #1E293B !important;
+}
+.custom-sidebar{
+    height: 80vh;
+    background: radial-gradient(circle at  20% 10%, rgba(33, 37, 41, 1) 40%, rgba(30, 41, 59, 1) 100%);
+    background-color: #1E293B;
+}
+.my-active{
+    background-color: #6B788F;
+    font-weight: bold;
+}
+
+@media screen and (min-width:990px){
+    .my-content{
+        padding-top: 72px;
+    }
+    
+}
+
+@media screen and (max-width:990px){
+    .my-content{
+        padding-top: 230px;
+    }
+    
+}
+@media screen and (max-width:357px){
+    .my-content{
+        padding-top: 266px;
+    }
+}
