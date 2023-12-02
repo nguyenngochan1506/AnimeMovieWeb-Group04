@@ -52,22 +52,19 @@
         <div class="header-content p-1 fs-3 fw-bold mt-2 mb-2">
             Anime Mới Cập Nhật
         </div>
-        <div class="row gap-4 my-item">
-            <div style="height: 325px; width: 230px;">
-                <div class="card" style="
-              background-image: url(./img/popular/popular-1.jpg);
-              height: 325px;
-              width: 230px;
-            ">
-                    <div class="information w-100">
-                        <div class="my-card-title">Anime 1</div>
-                        <div class="my-episodes-view d-flex justify-content-between align-items-center pe-2">
-                            <span class="my-episodes fw-light">Tập 1</span>
-                            <span class="my-view fw-light">Lượt xem: 123</span>
-                        </div>
+        <div class="row my-item justify-content-center ms-lg-0 ms-md-3">
+            <div class="col-lg-3 col-md-4 col-sm-6 position-relative p-0" >
+                <img src="./img/anime/animevsub-SOESV0gsCC.jpg" class="img-fluid" alt="anime">
+                <div class="information">
+                    <div class="my-card-title">Anime 1</div>
+                    <div class="my-episodes-view d-flex justify-content-between align-items-center pe-2">
+                        <span class="my-episodes fw-light">Tập 1</span>
+                        <span class="my-view fw-light">Lượt xem: 123</span>
                     </div>
                 </div>
             </div>
+            
+           
         </div>
         <!-- phần xem thêm -->
         <div class="container text-center mt-5">
@@ -91,24 +88,19 @@
 
             const html = arr.map(n => {
                 return `
-            <div style="height: 325px; width: 230px;">
-            <div class="card" style="
-              background-image: url(./img/popular/popular-3.jpg);
-              height: 325px;
-              width: 230px;
-            ">
-                    <div class="information w-100">
-                        <div class="my-card-title">Anime 1</div>
-                        <div class="my-episodes-view d-flex justify-content-between align-items-center pe-2">
-                            <span class="my-episodes fw-light">Số tập: 1/??</span>
-                            <span class="my-view fw-light">Lượt xem: 123</span>
-                        </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 position-relative p-0 mb-5 ms-xl-0 me-xl-0 me-sm-3 ms-sm-3 me-md-3 ms-md-3" >
+                <img src="./img/anime/animevsub-SOESV0gsCC.jpg" class="img-fluid" alt="anime">
+                <div class="information">
+                    <div class="my-card-title">Anime 1</div>
+                    <div class="my-episodes-view d-flex justify-content-between align-items-center pe-2">
+                        <span class="my-episodes fw-light">Tập 1</span>
+                        <span class="my-view fw-light">Lượt xem: 123</span>
                     </div>
                 </div>
             </div>
              `
             }).join("")
-            item.innerHTML = html;
+           item.innerHTML = html;
         </script>
         <script src="./bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
 </body>
