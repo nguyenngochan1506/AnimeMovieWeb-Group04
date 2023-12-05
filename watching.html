@@ -34,7 +34,7 @@
 
 
     <!-- Anime Section Begin -->
-    <section class="anime-details spad">
+    <section class=" anime-details spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-2"></div>
@@ -210,25 +210,25 @@
 
 
         </div>
-    </section>
-    <!-- Anime Section End -->
-    <!-- Phần footer -->
-    <div class="container-fluid" id="footer-include">
-    </div>
-    <script>
-        //phần include header and footer
-        const header = document.querySelector('#header-include');
-        const footer = document.querySelector('#footer-include');
-        fetch('nav.html').then(response => response.text()).then(html => header.innerHTML = html)
-        fetch('footer.html').then(response => response.text()).then(html => footer.innerHTML = html)
-    </script>
+        </section>
+        <!-- Anime Section End -->
+        <!-- Phần footer -->
+        <div class="container-fluid" id="footer-include">
+        </div>
+        <script>
+            //phần include header and footer
+            const header = document.querySelector('#header-include');
+            const footer = document.querySelector('#footer-include');
+            fetch('./component/nav.html').then(response => response.text()).then(html => header.innerHTML = html)
+            fetch('./component/footer.html').then(response => response.text()).then(html => footer.innerHTML = html)
+        </script>
 
-    <script>
-        const item = document.querySelector(".my-item");
-        const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        <script>
+            const item = document.querySelector(".my-item");
+            const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-        const html = arr.map(n => {
-            return `
+            const html = arr.map(n => {
+                return `
            <div style="height: 325px; width: 230px;">
            <div class="card" style="
              background-image: url(./img/popular/popular-3.jpg);
@@ -245,10 +245,10 @@
                </div>
            </div>
             `
-        }).join("")
-        item.innerHTML = html;
-    </script>
-    <script src="bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+            }).join("")
+            item.innerHTML = html;
+        </script>
+        <script src="bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
 
 </body>
 

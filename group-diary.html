@@ -24,8 +24,11 @@
                 <hr>
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-white my-active" aria-current="page">
+                        <a href="#" class="nav-link week-link text-white my-active" id="week-5" aria-current="page">
                             Tuần 5
+                        </a>
+                        <a href="#" class="nav-link week-link text-white " id="week-6" aria-current="page">
+                            Tuần 6
                         </a>
                     </li>
                 </ul>
@@ -33,7 +36,7 @@
         </div>
         <div class="col-8">
             <h1 class="text-white text-center mt-5">Group-04 Diary</h1>
-            <h4 class="text-white text-center mt-0 mb-4">(Week-5)</h4>
+            <h4 class="text-white text-center mt-0 mb-4" id="week-title">(Week-5)</h4>
             <table class="table table-dark table-hover">
                 <thead>
                     <tr>
@@ -92,10 +95,11 @@
             //phần include header and footer
             const header = document.querySelector('#header-include');
             const footer = document.querySelector('#footer-include');
-            fetch('nav.html').then(response => response.text()).then(html => header.innerHTML = html)
-            fetch('footer.html').then(response => response.text()).then(html => footer.innerHTML = html)
+            fetch('./component/nav.html').then(response => response.text()).then(html => header.innerHTML = html)
+            fetch('./component/footer.html').then(response => response.text()).then(html => footer.innerHTML = html)
         </script>
         <script src="./bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+        <script src="./js/group-diary.js"></script>
 
 </body>
 

@@ -58,8 +58,8 @@
       //phần include header and footer
       const header = document.querySelector('#header-include');
       const footer = document.querySelector('#footer-include');
-      fetch('nav.html').then(response => response.text()).then(html => header.innerHTML = html)
-      fetch('footer.html').then(response => response.text()).then(html => footer.innerHTML = html)
+      fetch('./component/nav.html').then(response => response.text()).then(html => header.innerHTML = html)
+            fetch('./component/footer.html').then(response => response.text()).then(html => footer.innerHTML = html)
   </script>
 </body>
 
