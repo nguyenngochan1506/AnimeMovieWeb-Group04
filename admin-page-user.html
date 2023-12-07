@@ -72,108 +72,39 @@
           <div class="search-bar">
             <p style="margin-top: 1px; font-size: 18px">Tìm kiếm:</p>
             <input type="text" style="padding: 10px" />
-            <button class="find-btn">Tìm</button>
+            <button class="btn btn-info">Tìm</button>
           </div>
           <div class="user-list" style="color: black">
-            <table width="800" border="1">
-              <tr>
-                <th>id</th>
-                <th>Username</th>
-                <th>email</th>
-                <th>Chức năng</th>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>hanprovip</td>
-                <td>123@gmail.com</td>
-                <td>
-                  <button class="change">sửa</button>
-                  <button class="delete">xóa</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>hanprovip</td>
-                <td>123@gmail.com</td>
-                <td>
-                  <button class="change">sửa</button>
-                  <button class="delete">xóa</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>hanprovip</td>
-                <td>123@gmail.com</td>
-                <td>
-                  <button class="change">sửa</button>
-                  <button class="delete">xóa</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>hanprovip</td>
-                <td>123@gmail.com</td>
-                <td>
-                  <button class="change">sửa</button>
-                  <button class="delete">xóa</button>
-                </td>
-              </tr>
-
-              <tr>
-                <td>1</td>
-                <td>hanprovip</td>
-                <td>123@gmail.com</td>
-                <td>
-                  <button class="change">sửa</button>
-                  <button class="delete">xóa</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>hanprovip</td>
-                <td>123@gmail.com</td>
-                <td>
-                  <button class="change">sửa</button>
-                  <button class="delete">xóa</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>hanprovip</td>
-                <td>123@gmail.com</td>
-                <td>
-                  <button class="change">sửa</button>
-                  <button class="delete">xóa</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>hanprovip</td>
-                <td>123@gmail.com</td>
-                <td>
-                  <button class="change">sửa</button>
-                  <button class="delete">xóa</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>hanprovip</td>
-                <td>123@gmail.com</td>
-                <td>
-                  <button class="change">sửa</button>
-                  <button class="delete">xóa</button>
-                </td>
-              </tr>
+            <table class="my-table" border="1" style="width: 800px;">
+              <thead>
+                <tr>
+                  <th>id</th>
+                  <th>FullName</th>
+                  <th>Username</th>
+                  <th>email</th>
+                  <th>Chức năng</th>
+                </tr>
+              </thead>
+              <tbody>
+                <h2>Đang tải dữ liệu</h2>
+              </tbody>
             </table>
           </div>
-          <div style="color: black">
-            <div class="pagination">
-              <button>previous</button>
-              <a href="" style="margin-left: 10px; text-decoration: none">1</a>
-              <a href="" style="margin-left: 10px; text-decoration: none">2</a>
-              <button style="margin-left: 10px; width: 75px">next</button>
-            </div>
-          </div>
+          <nav aria-label="...">
+            <ul class="pagination w-75">
+              <li class="page-item disabled">
+                <span class="page-link">Previous</span>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item active" aria-current="page">
+                <span class="page-link">2</span>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>
@@ -187,35 +118,9 @@
     fetch('./component/nav.html').then(response => response.text()).then(html => header.innerHTML = html)
     fetch('./component/footer.html').then(response => response.text()).then(html => footer.innerHTML = html)
   </script>
-  <script>
-    const item = document.querySelector(".my-item");
-    const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-    const html = arr
-      .map((n) => {
-        return `
-            <div style="height: 325px; width: 230px;">
-            <div class="card" style="
-              background-image: url(./img/popular/popular-3.jpg);
-              height: 325px;
-              width: 230px;
-            ">
-                    <div class="information w-100">
-                        <div class="my-card-title">Anime 1</div>
-                        <div class="my-episodes-view d-flex justify-content-between align-items-center pe-2">
-                            <span class="my-episodes fw-light">Số tập: 1/??</span>
-                            <span class="my-view fw-light">Lượt xem: 123</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-             `;
-      })
-      .join("");
-    item.innerHTML = html;
-  </script>
   <script src="https://unpkg.com/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="./bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+  <script type="module" src="./js/admin-page-user.js"></script>
 </body>
 
 </html>
