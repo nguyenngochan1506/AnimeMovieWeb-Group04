@@ -11,7 +11,7 @@
 
 <body class="custom-bg">
     <!-- Phần nav -->
-    <header class="container-fluid p-3 text-bg-dark position-fixed z-3" id="header-include"">
+    <header class="container-fluid p-3 text-bg-dark position-fixed z-3" id="header-include">
     </header>
 
     <!-- Carousel -->
@@ -52,58 +52,33 @@
         <div class="header-content p-1 fs-3 fw-bold mt-2 mb-2">
             Anime Mới Cập Nhật
         </div>
-        <div class="row my-item justify-content-center ms-lg-0 ms-md-3">
-            <div class="col-lg-3 col-md-4 col-sm-6 position-relative p-0" >
-                <img src="./img/anime/animevsub-SOESV0gsCC.jpg" class="img-fluid" alt="anime">
-                <div class="information">
-                    <div class="my-card-title">Anime 1</div>
-                    <div class="my-episodes-view d-flex justify-content-between align-items-center pe-2">
-                        <span class="my-episodes fw-light">Tập 1</span>
-                        <span class="my-view fw-light">Lượt xem: 123</span>
-                    </div>
-                </div>
-            </div>
-            
-           
+        <div class="row my-item justify-content-center ms-lg-0 ms-md-3" id="anime-list-container">
+            <div class="spinner-border text-light" style="width: 4rem; height: 4rem;" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>            
         </div>
-        <!-- phần xem thêm -->
-        <div class="container text-center mt-5">
-            <button class="btn btn-outline-danger">Xem Thêm</button>
-        </div>
-        </div>
-        <!-- Phần footer -->
-        <div class="container-fluid" id="footer-include">
-            
-        </div>
-        <script>
-            //phần include header and footer
-            const header = document.querySelector('#header-include');
-            const footer = document.querySelector('#footer-include');
-            fetch('./component/nav.html').then(response => response.text()).then(html => header.innerHTML = html)
-            fetch('./component/footer.html').then(response => response.text()).then(html => footer.innerHTML = html)
-        </script>
-        <script>
-            const item = document.querySelector(".my-item");
-            const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-            const html = arr.map(n => {
-                return `
-                <div class="col-lg-3 col-md-4 col-sm-6 position-relative p-0 mb-5 ms-xl-0 me-xl-0 me-sm-3 ms-sm-3 me-md-3 ms-md-3" >
-                <img src="./img/anime/animevsub-SOESV0gsCC.jpg" class="img-fluid" alt="anime">
-                <div class="information">
-                    <div class="my-card-title fs-4">Anime 1</div>
-                    <div class="my-episodes-view d-flex justify-content-between align-items-center pe-2">
-                        <span class="my-episodes fw-light">Tập 1</span>
-                        <span class="my-view fw-light">Lượt xem: 123</span>
-                    </div>
-                </div>
-            </div>
-             `
-            }).join("")
-           item.innerHTML = html;
-        </script>
-        <script src="./js/index.js" type="module"></script>
-        <script src="./bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+
+    </div>
+    <!-- phần xem thêm -->
+    <div class="container text-center mt-5">
+        <button class="btn btn-outline-danger" id="button_xemthem">Xem Thêm</button>
+    </div>
+    </div>
+    <!-- Phần footer -->
+    <div class="container-fluid" id="footer-include">
+
+    </div>
+    <script>
+        //phần include header and footer
+        const header = document.querySelector('#header-include');
+        const footer = document.querySelector('#footer-include');
+        fetch('./component/nav.html').then(response => response.text()).then(html => header.innerHTML = html)
+        fetch('./component/footer.html').then(response => response.text()).then(html => footer.innerHTML = html)
+    </script>
+
+    <script src="./js/index.js" type="module"></script>
+    <script src="./bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

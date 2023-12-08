@@ -12,7 +12,7 @@ window.addEventListener("load", () => {
       const data = await handleLogin(userName, password);
       localStorage.setItem("token", data.token);
       alert("Đăng nhập thành công!");
-      setTimeout(() => {
+       setTimeout(() => {
         window.location.href = "index.html";
       }, 2000);
     } catch (error) {
@@ -34,7 +34,7 @@ const handleLogin = async (userName, password) => {
   });
 
   if (!response.ok) {
-    throw new Error("Đăng nhập thất bại");
+    throw new Error("Sai tên đăng nhập hoặc mật khẩu");
   }
 
   return response.json();
