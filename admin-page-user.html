@@ -71,8 +71,8 @@
           </div>
           <div class="search-bar">
             <p style="margin-top: 1px; font-size: 18px">Tìm kiếm:</p>
-            <input type="text" style="padding: 10px" />
-            <button class="btn btn-info">Tìm</button>
+            <input id="search-input" type="text" style="padding: 10px" />
+            <button class="btn btn-info" id="btn-search">Tìm</button>
           </div>
           <div class="user-list" style="color: black">
             <table class="my-table" border="1" style="width: 800px;">
@@ -86,22 +86,19 @@
                 </tr>
               </thead>
               <tbody>
-                <h2>Đang tải dữ liệu</h2>
               </tbody>
             </table>
           </div>
           <nav aria-label="...">
             <ul class="pagination w-75">
-              <li class="page-item disabled">
-                <span class="page-link">Previous</span>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item active" aria-current="page">
-                <span class="page-link">2</span>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
               <li class="page-item">
-                <a class="page-link" href="#">Next</a>
+                <a class="page-link" href="#" id="trang-dau">Trang Đầu</a>
+              </li>
+              <li class="list-pagination d-flex">
+                
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#"  id="trang-cuoi">Trang Cuối</a>
               </li>
             </ul>
           </nav>
