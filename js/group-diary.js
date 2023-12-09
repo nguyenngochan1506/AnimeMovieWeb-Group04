@@ -16,39 +16,43 @@ const week = (n) => {
             customHtml = `
             <tr>
             <th>#1</th>
-            <td>Làm giao diện cho AnimeFavorites</td>
+            <td>Làm chức năng cho trang admin-user</td>
             <td>Nguyễn Ngọc Hân</td>
             <td>05-12-2023</td>
             <td>07-12-2023</td>
+            <td>Hoàn thành</td>
         </tr>
         <tr>
             <th>#2</th>
-            <td>Làm chức năng login</td>
+            <td>Làm giao diện admin-anime</td>
             <td>Lê Bá Khánh Duy</td>
             <td>05-12-2023</td>
             <td>07-12-2023</td>
-            
+            <td>Hoàn thành (Trễ 1 ngày)</td>
         </tr>
         <tr>
             <th>#3</th>
-            <td>Làm chức năng sigup</td>
+            <td>Làm chức năng load anime cho index</td>
             <td>Hoàng Lê Nguyên Mạnh</td>
             <td>05-12-2023</td>
             <td>07-12-2023</td>
+            <td>Hoàn thành</td>
         </tr>
         <tr>
             <th>#4</th>
-            <td>Làm giao diện cho trang ProfileUser</td>
+            <td>Làm giao diện cho trang AnimeFavorite</td>
             <td>Đăng Văn Trung</td>
             <td>05-12-2023</td>
             <td>07-12-2023</td>
+            <td>Hoàn thành</td>
         </tr>
         <tr>
             <th>#5</th>
-            <td>Làm giao diện cho trang Admin Anime Manager</td>
+            <td>Làm chức năng login</td>
             <td>Nguyễn Vũ Bảo</td>
             <td>05-12-2023</td>
             <td>07-12-2023</td>
+            <td>Hoàn thành</td>
         </tr>`           
         document.querySelector('#week-6').classList.add('my-active')
             table.innerHTML = customHtml;
@@ -62,6 +66,7 @@ const week = (n) => {
             <td>Nguyễn Ngọc Hân</td>
             <td>28-11-2023</td>
             <td>30-11-2023</td>
+            <td>Hoàn thành</td>
         </tr>
         <tr>
             <th>#2</th>
@@ -69,7 +74,7 @@ const week = (n) => {
             <td>Lê Bá Khánh Duy</td>
             <td>28-11-2023</td>
             <td>30-11-2023</td>
-            
+            <td>Hoàn thành</td>
         </tr>
         <tr>
             <th>#3</th>
@@ -77,6 +82,7 @@ const week = (n) => {
             <td>Hoàng Lê Nguyên Mạnh</td>
             <td>28-11-2023</td>
             <td>03-12-2023</td>
+            <td>Hoàn thành</td>
         </tr>
         <tr>
             <th>#4</th>
@@ -84,6 +90,7 @@ const week = (n) => {
             <td>Đăng Văn Trung</td>
             <td>28-11-2023</td>
             <td>03-12-2023</td>
+            <td>Hoàn thành</td>
         </tr>
         <tr>
             <th>#5</th>
@@ -91,6 +98,7 @@ const week = (n) => {
             <td>Nguyễn Vũ Bảo</td>
             <td>28-11-2023</td>
             <td>05-12-2023</td>
+            <td>Hoàn thành</td>
         </tr>
             `
             document.querySelector('#week-5').classList.add('my-active')
