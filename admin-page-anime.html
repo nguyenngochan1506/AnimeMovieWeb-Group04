@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lí anime</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/admin-page-anime.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="custom-bg">
+    <header class="container-fluid p-3 text-bg-dark position-fixed z-3" id="header-include"></header>
+    <div class="admin-content container my-custom-css bg-light">
+        <div class="admin-table row">
+            <div class="admin_left col-md-3">
+               <!-- phần sidebar -->
+            </div>
+            <div class="admin_right col-md-9">
+                <div class="overview">
+                    <div style="margin-left: 325px; color: black">
+                        <h2 style="width: max-content">Quản lý anime</h2>
+                    </div>
+                    <div class="search-bar">
+                        <p style="margin-top: 5px; font-size: 18px">Tìm kiếm:</p>
+                        <input type="text" style="padding: 4px" />
+                        <button class="btn btn-info">Tìm</button>
+                        <div class="add-button">
+                            <button type="button" class="btn btn-primary">Thêm</button>
+                        </div>
+                    </div>
+                    <div class="anime-list" style="color: black">
+                        <table id="anime-table" class="table table-striped" style="width: 850px;">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Tên anime</th>
+                                    <th>Số tập</th>
+                                    <th>Trạng thái</th>
+                                    <th>Chức năng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>1</th>
+                                    <th>Sen to Chihiro no Kamikakushi</th>
+                                    <th>18/18</th>
+                                    <th>Hoàn thành</th>
+                                    <th>
+                                        <button type="button" class="btn btn-success">Sửa</button>
+                                        <button type="button" class="btn btn-danger">Xóa</button>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>2</th>
+                                    <th>Kizumonogatari III: Reiket su-hen</th>
+                                    <th>10/18</th>
+                                    <th>Còn tiếp</th>
+                                    <th>
+                                        <button type="button" class="btn btn-success">Sửa</button>
+                                        <button type="button" class="btn btn-danger">Xóa</button>
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div id="myModal" class="modal">
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <form id="myForm">
+                                    <label for="id">#:</label><br>
+                                    <input type="text" id="id" name="No."><br>
+                                    <label for="name">Tên:</label><br>
+                                    <input type="text" id="name" name="name"><br>
+                                    <label for="episodes">Số tập:</label><br>
+                                    <input type="text" id="episodes" name="episodes"><br>
+                                    <label for="status">Trạng thái:</label><br>
+                                    <input type="text" id="status" name="status"><br>
+                                    <button type="button" class="btn btn-primary">Nhập</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <nav aria-label="...">
+                        <ul class="pagination w-75">
+                            <li class="page-item disabled">
+                                <span class="page-link">Trước</span>
+                            </li>
+                            <li class="page-item active" aria-current="page">
+                                <span class="page-link">1</span>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Sau</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="footer-include"></div>
+    <script>
+        //phần include header and footer
+        const header = document.querySelector("#header-include");
+        const footer = document.querySelector("#footer-include");
+        const sidebar = document.querySelector(".admin_left");
+    
+        fetch('./component/nav.html').then(response => response.text()).then(html => header.innerHTML = html)
+        fetch('./component/footer.html').then(response => response.text()).then(html => footer.innerHTML = html)
+        fetch('./component/sidebar.html').then(response => response.text()).then(html => sidebar.innerHTML = html)
+      </script>
+    <script src="https://unpkg.com/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="./bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
