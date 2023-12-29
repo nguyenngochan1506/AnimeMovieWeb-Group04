@@ -8,21 +8,21 @@ html, body {
     height: 100%;
 }
 
-.container-login {
+.container-signup {
     height: 100%;
     width: 100%;
     background-color: #1e293b;
     padding-top: 80px;
 }
 
-.login-header {
+.signup-header {
     width: 100%;
     height: 40px;
     margin: 0 auto;
     display: flex;
 }
 
-.login-header-left {
+.signup-header-left {
     width: 240px;
     height: 40px;
     background-color: black;
@@ -30,7 +30,7 @@ html, body {
     position: absolute;
 }
 
-.login-header-left p {
+.signup-header-left p {
     color: #a7a7a7;
     display: flex;
     margin-left: 16px;
@@ -40,32 +40,32 @@ html, body {
     font-weight: 700;
 }
 
-.login-header-right {
+.signup-header-right {
     width: calc(100% - 0px);
     height: 40px;
     background-color: rgb(36, 37, 37);
     margin-left: 200px;
 }
 
-.container-login-main {
+.container-signup-main {
     width: 95%;
     height: 80%;
     margin: 0 auto;
     margin-top: 2%;
 }
 
-.login {
+.signup {
     width: 50%;
     height: 85%;
     margin: 0 auto;
     margin-top: 5%;
 }
 
-.login div h6 {
+.signup div h6 {
     color: #cccccc;
 }
 
-.login div input {
+.signup div input {
     width: 100%;
     height: 40px;
     background-color: black;
@@ -73,11 +73,11 @@ html, body {
     border: none;
 }
 
-.login div div {
-    margin-top: 20px;
+.signup div div {
+    margin-top: 10px;
 }
 
-.login-btn {
+.signup-btn {
     background-color: rgb(183, 58, 58);
     border-radius: 5px;
     width: 120px;
@@ -86,7 +86,7 @@ html, body {
     color: white;
 }
 
-.login-btn:hover {
+.signup-btn:hover {
     background-color: rgb(204, 54, 54);
 }
 
@@ -100,7 +100,7 @@ html, body {
     margin-left: 10px;
 }
 
-.sign-up-btn {
+.login-btn {
     width: 120%;
     height: 35px;
     background-color: rgb(54, 158, 105);
@@ -111,10 +111,11 @@ html, body {
     margin-left: 40%;
 }
 
-.sign-up-btn:hover {
+.login-btn:hover {
     background-color: rgb(52, 176, 112);
 }
 
 .login div input {
     color: #fff !important;
 }
+

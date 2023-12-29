@@ -1,185 +1,224 @@
-*{
-    font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
+* {
+  font-family: Nunito, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
 }
-.custom-bg{
-    background: #1E293B;
-    color: #fff;
+.custom-bg {
+  background: #1e293b;
+  color: #fff;
 }
-.information{
-    color: #fff;
-    font-weight: 600;
-    position: absolute;
-    bottom: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), #000);
+.information {
+  color: #fff;
+  font-weight: 600;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), #000);
 }
-.information .my-episodes-view{
-    font-size: small;
-    position: relative;
-}
-
-.header-content{
-    background-color: #121b28;
-    clip-path: polygon(0 0, 0 100%, 95% 100%, 100% 50%, 95% 0);
-    width: 30%;
-}
-.custom-items{
-    height: 325px;
-    background-repeat: no-repeat;
-    width: 76%;
+.information .my-episodes-view {
+  font-size: small;
+  position: relative;
 }
 
-@media screen and (min-width:990px){
-    .my-custom-css{
-        padding-top: 72px;
-    }
-    
+.header-content {
+  background-color: #121b28;
+  clip-path: polygon(0 0, 0 100%, 95% 100%, 100% 50%, 95% 0);
+  width: 30%;
+}
+.custom-items {
+  height: 325px;
+  background-repeat: no-repeat;
+  width: 76%;
 }
 
-@media screen and (max-width:990px){
-    .my-custom-css{
-        padding-top: 230px;
-    }
-    
-}
-@media screen and (max-width:357px){
-    .my-custom-css{
-        padding-top: 266px;
-    }
-    
+@media screen and (min-width: 990px) {
+  .my-custom-css {
+    padding-top: 72px;
+  }
 }
 
-.admin-content{
-    height: 750px;
-    border: 2px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media screen and (max-width: 990px) {
+  .my-custom-css {
+    padding-top: 230px;
+  }
+}
+@media screen and (max-width: 357px) {
+  .my-custom-css {
+    padding-top: 266px;
+  }
 }
 
-.admin-table{
-    width: 90%;
-    height: 80%;
+.admin-content {
+  height: 750px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.admin_logo{
-    width: 100%;
-    height: 35%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 2px solid black ;
+.admin-table {
+  width: 90%;
+  height: 80%;
 }
 
-.logo{
-    width: 80%;
-    height: 80%;
-    border: 3px solid black;
-    border-radius: 100%;
+.admin_logo {
+  width: 100%;
+  height: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid black;
 }
 
-.admin_quanly{
-    height: 65%;
+.logo {
+  width: 80%;
+  height: 80%;
+  border: 3px solid black;
+  border-radius: 100%;
 }
 
-h3, p, a{
-    color: #000;
+.admin_quanly {
+  height: 65%;
 }
 
-.quanly_top{
-    width: 100%;
-    height: 75%;
-    display: flex;
-    flex-direction: column;
-   align-items: center;
-   padding: 15px;
-   
+h3,
+p,
+a {
+  color: #000;
 }
 
-.quanly_bottom{
-    width: 100%;
-    height: 25%;
+.quanly_top {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
 }
 
-.dropup{
-    height: 100%;
-    width: 40%;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
+.quanly_bottom {
+  width: 100%;
+  height: 25%;
 }
 
-.name{
-    width: 100%;
-}
-.quanly_btn{
-   height: 50px;
-   width: 50px;
-   margin: 0 20px;
-   border: 2px solid black;
+.dropup {
+  height: 100%;
+  width: 40%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
 }
 
-.overview{
-    height: 40%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+.name {
+  width: 100%;
+}
+.quanly_btn {
+  height: 40px;
+  width: 40px;
+  margin: 0 20px;
+  border: 2px solid black;
 }
 
-.admin_left{
-        border-right: 5px solid black;
+.overview {
+  height: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.admin-table{
-    border: 5px solid black;
-    position: relative;
+.admin_left {
+  border-right: 5px solid black;
+}
+
+.admin-table {
+  border: 5px solid black;
+  position: relative;
   padding: 20px; /* Để tạo khoảng trắng giữa nền và nội dung */
 }
 
 .admin-table::before {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
-    transition: top 0.3s ease-out; /* Thêm hiệu ứng transition cho smoothness */
-  }
-
-  .admin-table:hover::before {
-    top: 0; /* Di chuyển phần bóng lên khi hover */
-  }
-
-.follow_board{
-    width: 30%;
-    height: 90%;
-    border-radius: 10px;
-   
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+  transition: top 0.3s ease-out; /* Thêm hiệu ứng transition cho smoothness */
 }
 
-.follow_bg1{
-    background: linear-gradient(to bottom, #DE4A83, #5D5AE7);
+.admin-table:hover::before {
+  top: 0; /* Di chuyển phần bóng lên khi hover */
 }
 
-.follow_bg2{
-    background: linear-gradient(to bottom,#2EDD80,#14A78A);
+.follow_board {
+  width: 30%;
+  height: 90%;
+  border-radius: 10px;
 }
 
-.follow_bg3{
-    background: linear-gradient(to bottom,#FB5519, #EF1866);
+.follow_bg1 {
+  background: linear-gradient(to bottom, #de4a83, #5d5ae7);
 }
 
-.follow_top{
-    height: 100%;
-    display: flex;
-    align-items: center;
+.follow_bg2 {
+  background: linear-gradient(to bottom, #2edd80, #14a78a);
 }
 
-
-.follow_icon{
-    width:20%;
-    margin-bottom: 10px;
-    margin-left: 40px;
+.follow_bg3 {
+  background: linear-gradient(to bottom, #fb5519, #ef1866);
 }
+
+.follow_top {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.follow_icon {
+  width: 20%;
+  margin-bottom: 10px;
+  margin-left: 40px;
+}
+
+.follow_board {
+  transition: 0.2s;
+}
+
+.follow_board:hover {
+  transform: scale(1.1);
+}
+
+.admin_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btnquanly {
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 70px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.btnquanly:hover {
+  background-color: #e8ebed;
+}
+
+.quanly1 {
+  width: 90px;
+  height: 70px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
 

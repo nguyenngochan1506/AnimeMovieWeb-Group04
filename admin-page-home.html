@@ -28,22 +28,26 @@
                 </div>
                 <div class="admin_quanly">
                     <div class="quanly_top">
-                        <a href="index.html">
-                            <h3>Trang chủ</h3>
+                        <a style="background-color: #cfd3d4;" class="btnquanly" href="index.html">
+                            <i class="fa-solid fa-house"></i>
+                            <span>Trang chủ</span>
                         </a>
-                        <a href="./admin-page-user.html">
-                            <p>Quản lý user</p>
+                        <a class="btnquanly quanly1" href="./admin-page-user.html">
+                            <i class="fa-solid fa-users-gear"></i>
+                            <span>Quản lý user</span>
                         </a>
-                        <a href="#">
-                            <p>Quản lý anime</p>
+                        <a class="btnquanly quanly1" href="#">
+                            <i class="fa-solid fa-clapperboard"></i>
+                            <span>Quản lý film</span>
                         </a>
                     </div>
                     <div class="quanly_bottom d-flex">
                         <!-- Default dropup button -->
                         <div class="btn-group dropup">
-                            <button type="button" class="quanly_btn btn btn-light rounded-circle d-flex justify-content-center align-items-center"
+                            <button type="button btndropdpwn"
+                                class="quanly_btn btn btn-light rounded-circle d-flex justify-content-center align-items-center"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fa-solid fa-eject fa-2xl"></i>
+                                <i class="fa-solid fa-eject "></i>
                             </button>
                             <ul class="dropdown-menu">
                                 <!-- Dropdown menu links -->
@@ -61,13 +65,15 @@
                 </div>
             </div>
             <div class="admin_right col-md-9">
+                <h2 style="color: black; margin-bottom: 25px; margin-left: 15px;">Bảng dữ liệu</h2>
+                <!-- row1 -->
                 <div class="overview">
                     <div class="follow_board follow_bg1">
                         <div class="follow_top ">
                             <i class="follow_icon fa-regular fa-user fa-2xl"> </i>
                             <div class="follow_data">
-                                <h3 style="margin: 0;">30000</h3>
-                                <p>total members</p>
+                                <h3 style="margin: 0; color: #fff;">30000</h3>
+                                <p style="color: #fff;">total members</p>
                             </div>
                         </div>
                     </div>
@@ -75,8 +81,8 @@
                         <div class="follow_top">
                             <i class="follow_icon fa-regular fa-user fa-2xl"> </i>
                             <div class="follow_data">
-                                <h3 style="margin: 0;">30000</h3>
-                                <p>online members</p>
+                                <h3 style="margin: 0; color: #fff;">30000</h3>
+                                <p style="color: #fff;">online members</p>
                             </div>
                         </div>
 
@@ -85,8 +91,31 @@
                         <div class="follow_top">
                             <i class="follow_icon fa-solid fa-film fa-2xl"></i>
                             <div class="follow_data">
-                                <h3 style="margin: 0;">30000</h3>
-                                <p>total movie</p>
+                                <h3 style="margin: 0; color: #fff;">30000</h3>
+                                <p style="color: #fff;">total movie</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- row2 -->
+                <div class="overview">
+                    <div class="follow_board follow_bg1">
+                        <div class="follow_top ">
+                            <i class="follow_icon fa-solid fa-user-plus fa-2xl"></i>
+                            <div class="follow_data">
+                                <h3 style="margin: 0; color: #fff;">25</h3>
+                                <p style="color: #fff;">new members</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="follow_board follow_bg3">
+                        <div class="follow_top">
+                            <i class="follow_icon fa-solid fa-film fa-2xl"></i>
+                            <div class="follow_data">
+                                <h3 style="margin: 0; color: #fff;">25</h3>
+                                <p style="color: #fff;">new movie</p>
                             </div>
                         </div>
                     </div>
@@ -103,7 +132,7 @@
         const header = document.querySelector('#header-include');
         const footer = document.querySelector('#footer-include');
         fetch('./component/nav.html').then(response => response.text()).then(html => header.innerHTML = html)
-            fetch('./component/footer.html').then(response => response.text()).then(html => footer.innerHTML = html)
+        fetch('./component/footer.html').then(response => response.text()).then(html => footer.innerHTML = html)
     </script>
     <script>
         const item = document.querySelector(".my-item");
