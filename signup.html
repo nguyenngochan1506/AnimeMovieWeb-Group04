@@ -23,29 +23,29 @@
         <div class="signup-header-right"></div>
     </div>
     <div class="container-login-main">
-        <form class="signup">
+        <form class="signup" id="signup-form">
             <div>
                 <div>
                     <h6>Tên đăng nhập</h6>
-                    <input type="text" style="color: white; padding-left: 20px" placeholder="Nhập tên đăng nhập" />
+                    <input id="userName" type="text" style="color: white; padding-left: 20px" placeholder="Nhập tên đăng nhập" />
                 </div>
                 <div>
                     <h6>Mật khẩu</h6>
-                    <input style="color: white; padding-left: 20px" type="password" id="mau-khau"
+                    <input id="password" style="color: white; padding-left: 20px" type="password" id="mau-khau"
                         placeholder="Nhập mật khẩu của bạn" />
                 </div>
                 <div>
                     <h6>Nhập Lại Mật khẩu</h6>
-                    <input style="color: white; padding-left: 20px" type="password" id="mau-khau-nhap-lai"
+                    <input id="retypepass" style="color: white; padding-left: 20px" type="password" id="mau-khau-nhap-lai"
                         placeholder="Nhập lại mật khẩu của bạn" />
                 </div>
                 <div>
                     <h6>Họ Tên</h6>
-                    <input type="text" style="color: white; padding-left: 20px" placeholder="Họ Tên" />
+                    <input id="fullName" type="text" style="color: white; padding-left: 20px" placeholder="Họ Tên" />
                 </div>
                 <div>
                     <h6>Email</h6>
-                    <input type="email" style="color: white; padding-left: 20px" placeholder="Nhập email của bạn" />
+                    <input id="email" type="email" style="color: white; padding-left: 20px" placeholder="Nhập email của bạn" />
                 </div>
             </div>
             <div class="btn-group">
@@ -72,7 +72,7 @@
         fetch('./component/nav.html').then(response => response.text()).then(html => header.innerHTML = html)
         fetch('./component/footer.html').then(response => response.text()).then(html => footer.innerHTML = html)
     </script>
-    <script type="module" src="./js/sigup.js"></script>
+    <script type="module" src="./js/signup.js"></script>
     </body>
 
 </html>
