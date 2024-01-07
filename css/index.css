@@ -1,11 +1,14 @@
-*{
-    font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
+* {
+    font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    ;
 }
-.custom-bg{
+
+.custom-bg {
     background: #1E293B;
     color: #fff;
 }
-.information{
+
+.information {
     width: 100%;
     padding: 0;
     color: #fff;
@@ -15,24 +18,25 @@
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), #000);
 }
 
-.information .my-episodes-view{
+.information .my-episodes-view {
     font-size: small;
     position: relative;
 }
 
-.header-content{
+.header-content {
     background-color: #121b28;
     clip-path: polygon(0 0, 0 100%, 95% 100%, 100% 50%, 95% 0);
     width: 40%;
 }
-.custom-items{
+
+.custom-items {
     height: 325px;
     background-repeat: no-repeat;
     width: 76%;
 }
 
-@media screen and (min-width:1400px){
-    .information{
+@media screen and (min-width:1400px) {
+    .information {
         width: 86%;
         padding: 0;
         color: #fff;
@@ -43,8 +47,8 @@
     }
 }
 
-@media screen and (max-width:376px){
-    .information{
+@media screen and (max-width:376px) {
+    .information {
         width: 80%;
         padding: 0;
         color: #fff;
@@ -54,27 +58,30 @@
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), #000);
     }
 }
-@media screen and (min-width:990px){
-    .my-custom-css{
+
+@media screen and (min-width:990px) {
+    .my-custom-css {
         padding-top: 72px;
     }
-    
+
 }
 
-@media screen and (max-width:990px){
-    .my-custom-css{
+@media screen and (max-width:990px) {
+    .my-custom-css {
         padding-top: 230px;
     }
-    
-}
-@media screen and (max-width:357px){
-    .my-custom-css{
-        padding-top: 266px;
-    }
-    
+
 }
 
-#button_xemthem:active{
+@media screen and (max-width:357px) {
+    .my-custom-css {
+        padding-top: 266px;
+    }
+
+}
+
+#button_xemthem:active {
     transform: scale(0.9);
 }
-  
+
+

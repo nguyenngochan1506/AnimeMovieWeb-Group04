@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-    const arrWeek = [5, 6, 7];
+    const arrWeek = [5, 6, 7, 8];
     arrWeek.forEach((n) => {
         document.querySelector(`#week-${n}`).addEventListener('click', () => week(n))
     })
@@ -11,7 +11,145 @@ const week = (n) => {
     const table = document.querySelector('.table tbody');
     const weekTitle = document.querySelector('#week-title');
     document.querySelectorAll('.week-link').forEach(week => week.classList.remove('my-active'))
+    document.querySelector('.my-file').innerHTML='';
     switch (n) {
+        case 8:
+            customHtml = `
+            <tr>
+            <th>#1</th>
+            <td>làm giao diện cho biểu mẫu liên hệ</td>
+            <td>Nguyễn Ngọc Hân</td>
+            <td>06-01-2023</td>
+            <td>08-01-2023</td>
+            <td>hoàn thành</td>
+        </tr>
+        <tr>
+            <th>#2</th>
+            <td>chức năng load data cho anime-details</td>
+            <td>Lê Bá Khánh Duy</td>
+            <td>06-01-2023</td>
+            <td>08-01-2023</td>
+            <td>hoàn thành</td>
+        </tr>
+        <tr>
+            <th>#3</th>
+            <td>chức năng đăng ký</td>
+            <td>Hoàng Lê Nguyên Mạnh</td>
+            <td>06-01-2023</td>
+            <td>08-01-2023</td>
+            <td>hoàn thành</td>
+        </tr>
+        <tr>
+            <th>#4</th>
+            <td>chức năng search</td>
+            <td>Đăng Văn Trung</td>
+            <td>06-01-2023</td>
+            <td>08-01-2023</td>
+            <td>chưa hoàn thành</td>
+        </tr>
+        <tr>
+            <th>#5</th>
+            <td>chức năng load data cho anime favorite</td>
+            <td>Nguyễn Vũ Bảo</td>
+            <td>06-01-2023</td>
+            <td>08-01-2023</td>
+            <td>hoàn thành</td>                                                                             
+        </tr>
+        `
+       document.querySelector('.my-file').innerHTML=`
+       <div class="h3">Các File Thiết Kế</div>
+                <ul class="d-flex">
+                    <li><strong>Hân</strong>
+                        <ul>
+                            <li>Home Page: 
+                                <ul>
+                                    <li>Giấy: <a class="link-info" href="./img/lab-07/homepage.png" target="_blank" rel="noopener noreferrer">File Giấy</a></li>
+                                </ul>
+                            </li>
+                            <li>Group-Diary: 
+                                <ul>
+                                    <li>Giấy: <a class="link-info" href="./img/lab-07/group-diary.png" target="_blank" rel="noopener noreferrer">File Giấy</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li><strong>Trung</strong>
+                        <ul>
+                            <li>Details-Page: 
+                                <ul>
+                                    <li>Giấy: <strong>null</strong></li>
+                                </ul>
+                            </li>
+                            <li>Category-Page: 
+                                <ul>
+                                    <li>Giấy: <strong>null</strong></li>
+                                </ul>
+                            </li>
+                            <li>Anime-Favorite-Page: 
+                                <ul>
+                                    <li>Giấy: <strong>null</strong></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li><strong>Bảo</strong>
+                        <ul>
+                            <li>Login: 
+                                <ul>
+                                    <li>Giấy: <a class="link-info" href="./img/lab-07/login.jpg" target="_blank" rel="noopener noreferrer">File Giấy</a></li>
+                                </ul>
+                            </li>
+                            <li>Admin-User-Page: 
+                                <ul>
+                                    <li>Giấy: <a class="link-info" href="./img/lab-07/admin-user-page.jpg" target="_blank" rel="noopener noreferrer">File Giấy</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li><strong>Mạnh</strong>
+                        <ul>
+                            <li>Watching-Page: 
+                                <ul>
+                                    <li>Giấy: <a class="link-info" href="./img/lab-07/watchingpage.jpg" target="_blank" rel="noopener noreferrer">File Giấy</a></li>
+                                </ul>
+                            </li>
+                            <li>Admin-Home-Page: 
+                                <ul>
+                                    <li>Giấy: <a class="link-info" href="./img/lab-07/admin-home-page.jpg" target="_blank" rel="noopener noreferrer">File Giấy</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li><strong>Duy</strong>
+                        <ul>
+                            <li>Sigup: 
+                                <ul>
+                                    <li>Giấy: <a class="link-info" href="./img/lab-07/sigup.jpg" target="_blank" rel="noopener noreferrer">File Giấy</a></li>
+                                </ul>
+                            </li>
+                            <li>About: 
+                                <ul>
+                                    <li>Giấy: <a class="link-info" href="./img/lab-07/about.jpg" target="_blank" rel="noopener noreferrer">File Giấy</a></li>
+                                </ul>
+                            </li>
+                            <li>Admin-Anime-Page: 
+                                <ul>
+                                    <li>Giấy: <a class="link-info" href="./img/lab-07/admin-anime-page.jpg" target="_blank" rel="noopener noreferrer">File Giấy</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+       `
+
+            document.querySelector('#week-8').classList.add('my-active')
+            table.innerHTML = customHtml;
+            weekTitle.innerHTML = "(Week-8)"
+            break;
         case 7:
             customHtml = `
             <tr>

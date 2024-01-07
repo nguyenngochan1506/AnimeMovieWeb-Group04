@@ -1,14 +1,12 @@
 import { HOST_NAME } from "./utils.js";
 
-console.log(HOST_NAME);
-
 const apiUrl = `${HOST_NAME}/anime?sort=view,desc&page=0&size=8`;
-
-console.log(apiUrl);
 
 let data;
 
 window.addEventListener("load", async () => {
+  
+
   let page = 0;
   try {
     const itemContainer = document.querySelector("#anime-list-container");
@@ -52,8 +50,9 @@ window.addEventListener("load", async () => {
   // bien button
   const xemThemButton = document.getElementById("button_xemthem");
   xemThemButton.addEventListener('click', () => handleLoadMore(++page))
-});
 
+
+});
 
 
 const handleLoadMore = async (page) => {
