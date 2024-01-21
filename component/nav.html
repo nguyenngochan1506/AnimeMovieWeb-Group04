@@ -1,4 +1,4 @@
-
+<!-- 
 
    <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
@@ -26,19 +26,58 @@
                 </a>
             </div>
         </div>
-    </div>
-    <!-- biểu mẫu liên hệ -->
-    <div id="contact" class="close-contact" >
-        <div class="content">
-            <i class="icon-close bi bi-x-circle"></i>
-            <div class="title">Liên Hệ</div>
-            <div class="group-input text-center">
-                <input class="mb-3" id="email" type="text" placeholder="Email">
-                <textarea id="infor" rows="8" type="text" placeholder="Nội dung"></textarea>
-            </div>
-            <div class="text-center">
-                <button><i class="bi bi-send" style="font-size: 1.5rem;"></i></button>
+    </div> -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <img src="./img/logo.png" alt="logo" />
+        </a>
+        <button class="navbar-toggler bg-success" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link px-2 text-white">Trang Chủ</a></li>
+                <li class="nav-item"><a href="category.html" class="nav-link px-2 text-white">Thể loại</a></li>
+                <li class="nav-item"><a href="group-diary.html" class="nav-link px-2 text-white">Group Diary</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link px-2 text-white">About</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-white show-contact">Liên Hệ</a></li>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+                </li>
+            </ul>
+            <span class="me-2">Tìm Kiếm</span>
+            <form class="d-flex" role="search">
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                    <input type="search" class="form-control form-control-dark text-bg-dark text-white" id="tim-kiem"
+                        placeholder="Search..." aria-label="Search" />
+                </form>
+            </form>
+            <div class="text-end ms-2 " id="my-profile">
+                
             </div>
         </div>
     </div>
-
+</nav>
+<!-- biểu mẫu liên hệ -->
+<div id="contact" class="close-contact">
+    <div class="content">
+        <i class="icon-close bi bi-x-circle"></i>
+        <div class="title">Liên Hệ</div>
+        <div class="group-input text-center">
+            <input class="mb-3" id="email" type="text" placeholder="Email">
+            <textarea id="infor" rows="8" type="text" placeholder="Nội dung"></textarea>
+        </div>
+        <div class="text-center">
+            <button><i class="bi bi-send" style="font-size: 1.5rem;"></i></button>
+        </div>
+    </div>
+</div>
