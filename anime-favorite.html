@@ -67,95 +67,8 @@
         </div>
         <div class="favourite-list">
           <h2 class="category-title">DANH SÁCH YÊU THÍCH</h2>
-          <div class="row g-5 col-lg-12">
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="product__item">
-                <img
-                  class="product__item__pic set-bg"
-                  src="./img/popular/popular-1.jpg"
-                />
-                <div class="ep">18 / 18</div>
-                <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                <div class="product__item__text">
-                  <h5><a href="#">Sen to Chihiro no Kamikakushi</a></h5>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="product__item">
-                <img
-                  class="product__item__pic set-bg"
-                  src="./img/popular/popular-2.jpg"
-                />
-                <div class="ep">18 / 18</div>
-                <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                <div class="product__item__text">
-                  <h5><a href="#">Kizumonogatari III: Reiket su-hen</a></h5>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="product__item">
-                <img
-                  class="product__item__pic set-bg"
-                  src="./img/popular/popular-3.jpg"
-                />
-                <div class="ep">18 / 18</div>
-                <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                <div class="product__item__text">
-                  <h5><a href="#">Shirogane Tamashii hen Kouhan sen</a></h5>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="product__item">
-                <img
-                  class="product__item__pic set-bg"
-                  src="./img/popular/popular-4.jpg"
-                />
-                <div class="ep">18 / 18</div>
-                <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                <div class="product__item__text">
-                  <h5>
-                    <a href="#">Rurouni Kenshin: Meiji Kenkaku Romantan</a>
-                  </h5>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="product__item">
-                <img
-                  class="product__item__pic set-bg"
-                  src="./img/popular/popular-5.jpg"
-                />
-                <div class="ep">10 / 10</div>
-                <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                <div class="product__item__text">
-                  <h5><a href="#">Mushishi Zoku Shou 2nd Season</a></h5>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="product__item">
-                <img
-                  class="product__item__pic set-bg"
-                  src="./img/popular/popular-6.jpg"
-                />
-                <div class="ep">10 / 10</div>
-                <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                <div class="product__item__text">
-                  <h5>
-                    <a href="#">Monogatari Series: Second Season</a>
-                  </h5>
-                </div>
-              </div>
-            </div>
+          <div class="row g-5 col-lg-12 group-anime">
+            <!-- phần load data -->
           </div>
           <div class="product__pagination d-flex justify-content-center">
             <a href="#" class="current-page">1</a>
@@ -184,6 +97,7 @@
         .then((html) => (footer.innerHTML = html));
     </script>
     <script src="./js/contact.js"></script>
+    <script type="module" src="./js/anime-favorite.js"></script>
   </body>
 
 </html>
