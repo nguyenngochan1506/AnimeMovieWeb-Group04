@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-    const arrWeek = [5, 6, 7, 8];
+    const arrWeek = [5, 6, 7, 8,9];
     arrWeek.forEach((n) => {
         document.querySelector(`#week-${n}`).addEventListener('click', () => week(n))
     })
@@ -13,6 +13,52 @@ const week = (n) => {
     document.querySelectorAll('.week-link').forEach(week => week.classList.remove('my-active'))
     document.querySelector('.my-file').innerHTML='';
     switch (n) {
+        case 9:
+            customHtml = `
+            <tr>
+            <th>#1</th>
+            <td>Phân lable cho header khi người dùng login</td>
+            <td>Nguyễn Ngọc Hân</td>
+            <td>21-01-2024</td>
+            <td>24-01-2024</td>
+            <td>...</td>
+        </tr>
+        <tr>
+            <th>#2</th>
+            <td>Load data cho userProfile</td>
+            <td>Lê Bá Khánh Duy</td>
+            <td>21-01-2024</td>
+            <td>24-01-2024</td>
+            <td>...</td>
+        </tr>
+        <tr>
+            <th>#3</th>
+            <td>Giao diện quên mật khẩu</td>
+            <td>Hoàng Lê Nguyên Mạnh</td>
+            <td>21-01-2024</td>
+            <td>24-01-2024</td>
+            <td>...</td>
+        </tr>
+        <tr>
+            <th>#4</th>
+            <td>Ligh-Theme cho giao diện</td>
+            <td>Đăng Văn Trung</td>
+            <td>21-01-2024</td>
+            <td>24-01-2024</td>
+            <td>...</td>
+        </tr>
+        <tr>
+            <th>#5</th>
+            <td>Chức năng quên mật khẩu</td>
+            <td>Nguyễn Vũ Bảo</td>
+            <td>21-01-2024</td>
+            <td>24-01-2024</td>
+            <td>...</td>
+        </tr>`
+            document.querySelector('#week-9').classList.add('my-active')
+            table.innerHTML = customHtml;
+            weekTitle.innerHTML = "(Week-9)"
+            break;
         case 8:
             customHtml = `
             <tr>
