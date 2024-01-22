@@ -5,46 +5,39 @@ window.addEventListener("load", () => {
   signupForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    let userName = document.querySelector("#userName").value;
-    let password = document.querySelector("#password").value;
-    let retypepass = document.querySelector("#retypepass").value;
-    let fullName = document.querySelector("#fullName").value;
-    let email = document.querySelector("#email").value;
+    let userName = document.querySelector("#userName-signup").value;
+    let password = document.querySelector("#passWord-signup").value;
+    let retypepass = document.querySelector("#retypePass-signup").value;
+    let fullName = document.querySelector("#fullName-signup").value;
+    let email = document.querySelector("#email-signup").value;
 
     try {
       // Perform basic validation
       if (!userName || !password || !retypepass || !fullName || !email) {
-        throw new Error(
-          "Vui lòng điền đầy đủ thông tin vào tất cả các trường."
-        );
+        throw new Error("Vui lòng điền đầy đủ thông tin vào tất cả các trường.");
       }
 
       if (password !== retypepass) {
-        throw new Error(
-          "Mật khẩu không khớp. Vui lòng nhập lại mật khẩu của bạn."
-        );
+        throw new Error("Mật khẩu không khớp. Vui lòng nhập lại mật khẩu của bạn.");
       }
 
-      const data = await handleSignup(
-        userName,
-        retypepass,
-        password,
-        fullName,
-        email
-      );
+      const data = await handleSignup(userName, password, retypepass, fullName, email);
+
+      // Hiển thị thông báo ngay sau khi submit thành công
       alert("Đăng ký thành công!");
 
       // Optional: Redirect to another page after successful signup
       setTimeout(() => {
         window.location.href = "login.html";
-      }, 1000);
+      }, 500);
     } catch (error) {
       alert(error.message);
     }
   });
 });
 
-const handleSignup = async (userName, password, fullName, email) => {
+
+const handleSignup = async (userName, password, email, fullName) => {
   const response = await fetch(`${HOST_NAME}/user/signup`, {
     method: "POST",
     headers: {
@@ -53,8 +46,8 @@ const handleSignup = async (userName, password, fullName, email) => {
     body: JSON.stringify({
       userName,
       password,
-      fullName,
       email,
+      fullName,
     }),
   });
 
