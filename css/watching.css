@@ -16,6 +16,12 @@
     border-color: black;
 }
 
+/* dark mode */
+
+body.dark{
+    background-color: #1E293B;
+}
+
 
 
 
