@@ -21,7 +21,7 @@ const week = (n) => {
             <td>Nguyễn Ngọc Hân</td>
             <td>21-01-2024</td>
             <td>24-01-2024</td>
-            <td>...</td>
+            <td>hoàn thành</td>
         </tr>
         <tr>
             <th>#2</th>
@@ -29,7 +29,7 @@ const week = (n) => {
             <td>Lê Bá Khánh Duy</td>
             <td>21-01-2024</td>
             <td>24-01-2024</td>
-            <td>...</td>
+            <td>chưa hoàn thành</td>
         </tr>
         <tr>
             <th>#3</th>
@@ -37,7 +37,7 @@ const week = (n) => {
             <td>Hoàng Lê Nguyên Mạnh</td>
             <td>21-01-2024</td>
             <td>24-01-2024</td>
-            <td>...</td>
+            <td>hoàn thành</td>
         </tr>
         <tr>
             <th>#4</th>
@@ -45,7 +45,7 @@ const week = (n) => {
             <td>Đăng Văn Trung</td>
             <td>21-01-2024</td>
             <td>24-01-2024</td>
-            <td>...</td>
+            <td>chưa hoàn thành</td>
         </tr>
         <tr>
             <th>#5</th>
@@ -53,7 +53,7 @@ const week = (n) => {
             <td>Nguyễn Vũ Bảo</td>
             <td>21-01-2024</td>
             <td>24-01-2024</td>
-            <td>...</td>
+            <td>hoàn thành</td>
         </tr>`
             document.querySelector('#week-9').classList.add('my-active')
             table.innerHTML = customHtml;
