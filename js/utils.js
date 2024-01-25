@@ -9,4 +9,11 @@ function parseJwt (token) {
     return JSON.parse(jsonPayload);
 }
 
-export {HOST_NAME, parseJwt};
+const getParamUrl = (param)=>{
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const result = urlParams.get(param)
+    return result;
+}
+
+export {HOST_NAME, parseJwt, getParamUrl};

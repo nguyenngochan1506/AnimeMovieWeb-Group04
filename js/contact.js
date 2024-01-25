@@ -21,7 +21,7 @@ const showProfile = ()=>{
                       <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
                     </a>
                     <ul class="dropdown-menu text-small shadow" >
-                      <li><a class="dropdown-item" href="#">Thông Tin Cá Nhân</a></li>
+                      <li><a class="dropdown-item" href="./../profile.html">Thông Tin Cá Nhân</a></li>
                       <li><a class="dropdown-item" href="./../anime-favorite.html">Danh Sách Yêu Thích</a></li>
                       <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" href="#">Đăng Xuất</a></li>

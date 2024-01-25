@@ -27,7 +27,7 @@ window.addEventListener("load", async () => {
     const html = data._embedded.animes
       .map((anime) => {
         return `
-                <div class="col-lg-3 col-md-4 col-sm-6 position-relative p-0 mb-5 ms-xl-0 me-xl-0 me-sm-3 ms-sm-3 me-md-3 ms-md-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 position-relative p-0 mb-5 ms-xl-0 me-xl-0 me-sm-3 ms-sm-3 me-md-3 ms-md-3" data-anime-id="${anime.id}">
                     <img src="${anime.coverImage}" class="img-fluid" alt="${anime.name}">
                     <div class="information">
                         <div class="my-card-title fs-4">${anime.name}</div>
@@ -52,7 +52,16 @@ window.addEventListener("load", async () => {
   xemThemButton.addEventListener('click', () => handleLoadMore(++page))
 
 
+
+  document.querySelectorAll('[data-anime-id]').forEach(ele =>{
+    const animeId = ele.getAttribute('data-anime-id');
+    ele.style.cursor = 'pointer'
+    ele.addEventListener('click', ()=>{
+      window.location.href = `./anime-details.html?animeId=${animeId}`
+    })
+  })
 });
+
 
 
 const handleLoadMore = async (page) => {
@@ -87,7 +96,7 @@ const handleLoadMore = async (page) => {
     const newHtml = newData._embedded.animes
       .map((anime) => {
         return `
-                    <div class="col-lg-3 col-md-4 col-sm-6 position-relative p-0 mb-5 ms-xl-0 me-xl-0 me-sm-3 ms-sm-3 me-md-3 ms-md-3">
+                    <div class="col-lg-3 col-md-4 col-sm-6 position-relative p-0 mb-5 ms-xl-0 me-xl-0 me-sm-3 ms-sm-3 me-md-3 ms-md-3" data-anime-id="${anime.id}">
                         <img src="${anime.coverImage}" class="img-fluid" alt="${anime.name}">
                         <div class="information">
                             <div class="my-card-title fs-4">${anime.name}</div>

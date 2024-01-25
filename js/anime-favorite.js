@@ -1,20 +1,25 @@
 import { HOST_NAME } from "./utils.js";
 
-window.addEventListener('load', () => {
-    handleAnimeFavorite().then(animefavorite => {
-        const urlAnimeList = [];
+window.addEventListener('load', async () => {
+    const urlAnimeList = [];
+    const response1 = await handleAnimeFavorite().then(animefavorite => {
         animefavorite.forEach(fa => {
-            urlAnimeList.push(fa._links.anime)
+            urlAnimeList.push(fa._links.anime.href)
         });
-        return urlAnimeList;
-    }).then(urlAnimeList=>{
-        console.log(urlAnimeList);
-        urlAnimeList.forEach(item =>{
-            //gọi từng link 1
-            fetch(item.href)
-            .then(response => response.json())
-            .then(data => {
-                const myHtml = `
+    })
+    console.log(urlAnimeList);
+    urlAnimeList.map(url =>{
+        const urlObject = new URL(url);
+        const path = urlObject.pathname;
+        fetch(`${HOST_NAME}${path}`, {
+            method:'GET',
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }).then(data=>{
+            return data.json();
+        }).then(data=>{
+            const myHtml = `
                 <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="product__item">
                 <img
@@ -31,7 +36,6 @@ window.addEventListener('load', () => {
             </div>
                 `
                 document.querySelector('.group-anime').innerHTML += myHtml;
-            })
         })
     })
 })
