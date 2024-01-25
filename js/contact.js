@@ -16,9 +16,9 @@ const showProfile = ()=>{
     const token = localStorage.getItem('token');
     if(token){
         document.querySelector('#my-profile').innerHTML=`
-        <div class="flex-shrink-0 dropstart ">
+        <div class="flex-shrink-0 dropstart">
                     <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                      <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                      <img src="https://th.bing.com/th/id/OIP.w2McZSq-EYWxh02iSvC3xwHaHa?rs=1&pid=ImgDetMain" alt="mdo" width="32" height="32" class="rounded-circle">
                     </a>
                     <ul class="dropdown-menu text-small shadow" >
                       <li><a class="dropdown-item" href="./../profile.html">Thông Tin Cá Nhân</a></li>
@@ -37,3 +37,9 @@ const showProfile = ()=>{
         `
     }
 }
+
+const handleApi = async (userId) => {
+    const response = await fetch(`${HOST_NAME}/nguoi-dung/${userId}`);
+    const data = await response.json();
+    return data;
+  };

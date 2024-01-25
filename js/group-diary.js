@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-    const arrWeek = [5, 6, 7, 8,9];
+    const arrWeek = [5, 6, 7, 8,9,10];
     arrWeek.forEach((n) => {
         document.querySelector(`#week-${n}`).addEventListener('click', () => week(n))
     })
@@ -13,13 +13,15 @@ const week = (n) => {
     document.querySelectorAll('.week-link').forEach(week => week.classList.remove('my-active'))
     document.querySelector('.my-file').innerHTML='';
     switch (n) {
+        case 10:
+            break;
         case 9:
             customHtml = `
             <tr>
             <th>#1</th>
             <td>Phân lable cho header khi người dùng login</td>
             <td>Nguyễn Ngọc Hân</td>
-            <td>21-01-2024</td>
+            <td>25-01-2024</td>
             <td>24-01-2024</td>
             <td>hoàn thành</td>
         </tr>
@@ -27,7 +29,7 @@ const week = (n) => {
             <th>#2</th>
             <td>Load data cho userProfile</td>
             <td>Lê Bá Khánh Duy</td>
-            <td>21-01-2024</td>
+            <td>25-01-2024</td>
             <td>24-01-2024</td>
             <td>chưa hoàn thành</td>
         </tr>
@@ -35,7 +37,7 @@ const week = (n) => {
             <th>#3</th>
             <td>Giao diện quên mật khẩu</td>
             <td>Hoàng Lê Nguyên Mạnh</td>
-            <td>21-01-2024</td>
+            <td>25-01-2024</td>
             <td>24-01-2024</td>
             <td>hoàn thành</td>
         </tr>
@@ -43,7 +45,7 @@ const week = (n) => {
             <th>#4</th>
             <td>Ligh-Theme cho giao diện</td>
             <td>Đăng Văn Trung</td>
-            <td>21-01-2024</td>
+            <td>25-01-2024</td>
             <td>24-01-2024</td>
             <td>chưa hoàn thành</td>
         </tr>
@@ -51,12 +53,70 @@ const week = (n) => {
             <th>#5</th>
             <td>Chức năng quên mật khẩu</td>
             <td>Nguyễn Vũ Bảo</td>
-            <td>21-01-2024</td>
+            <td>25-01-2024</td>
             <td>24-01-2024</td>
             <td>hoàn thành</td>
-        </tr>`
+        </tr>
+        </tbody>
+            </table>`
+        const customHtml2 = `
+        <table class="table table-dark table-hover">
+                <thead>
+                <tr>
+                <th>STT</th>
+                <th>Công Việc</th>
+                <th>Người Thực Hiện</th>
+                <th>Ngày Bắt Đầu</th>
+                <th>Ngày Kết Thúc</th>
+                <th>Trạng thái</th>
+            </tr>
+        </thead>
+            <tr>
+            <th>#1</th>
+            <td>Chức năng Search</td>
+            <td>Nguyễn Ngọc Hân</td>
+            <td>25-01-2024</td>
+            <td>28-01-2024</td>
+            <td>...</td>
+        </tr>
+        <tr>
+            <th>#2</th>
+            <td>chức năng đăng xuất</td>
+            <td>Lê Bá Khánh Duy</td>
+            <td>25-01-2024</td>
+            <td>28-01-2024</td>
+            <td>...</td>
+        </tr>
+        <tr>
+            <th>#3</th>
+            <td>load data cho trang watching</td>
+            <td>Hoàng Lê Nguyên Mạnh</td>
+            <td>25-01-2024</td>
+            <td>28-01-2024</td>
+            <td>...</td>
+        </tr>
+        <tr>
+            <th>#4</th>
+            <td>giao diện thay đổi mật khẩu</td>
+            <td>Đăng Văn Trung</td>
+            <td>25-01-2024</td>
+            <td>28-01-2024</td>
+            <td>...</td>
+        </tr>
+        <tr>
+            <th>#5</th>
+            <td>load data cho trang profile</td>
+            <td>Nguyễn Vũ Bảo</td>
+            <td>25-01-2024</td>
+            <td>28-01-2024</td>
+            <td>hoàn thành</td>
+        </tr>
+        `
             document.querySelector('#week-9').classList.add('my-active')
-            table.innerHTML = customHtml;
+            table.innerHTML = `${customHtml}
+            <h4 class="text-white text-center mt-0 mb-4 w-100 mt-4">(Week-9.2)</h4>
+            ${customHtml2}
+            `;
             weekTitle.innerHTML = "(Week-9)"
             break;
         case 8:
