@@ -21,7 +21,7 @@ window.addEventListener("load", () => {
         throw new Error("Mật khẩu không khớp. Vui lòng nhập lại mật khẩu của bạn.");
       }
 
-      const data = await handleSignup(userName, password, retypepass, fullName, email);
+      const data = await handleSignup(userName, password, email, fullName);
 
       // Hiển thị thông báo ngay sau khi submit thành công
       alert("Đăng ký thành công!");
