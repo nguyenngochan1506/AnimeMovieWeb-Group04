@@ -5,6 +5,15 @@ import { HOST_NAME, getParamUrl } from "./utils.js";
 window.onload = () => {
   const animeId = getParamUrl("animeId");
   const ep = getParamUrl("tap");
+
+   //lay id anime tu url  
+   fetch(`${HOST_NAME}/anime/${animeId}`)
+   .then(respnse => respnse.json())
+   .then(data =>{
+    console.log(data);
+       document.querySelector('.name_anime').innerHTML = data.name;
+       })
+   
   handleApi(animeId)
     .then((data) => {
       return data._embedded.episodes;
@@ -23,9 +32,10 @@ window.onload = () => {
     })
     .then((data) => {
       console.log(data);
-      const { title, source, episodeNumber } = data;
+      const { title, source, episodeNumber, name } = data;
       console.log(title, source);
       document.querySelector(".title_anime").innerHTML = title;
+      document.querySelector('.name_anime').innerHTML = name;
       document
         .querySelector(".anime__video__player iframe")
         .setAttribute("src", source);
@@ -35,6 +45,7 @@ window.onload = () => {
       document
         .querySelector(".btn_next")
         .addEventListener("click", () => handleBtnNext(ep, animeId));
+
     });
 };
 
