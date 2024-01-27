@@ -27,5 +27,21 @@ body.dark{
     flex-wrap: wrap;
 }
 
+.anime__video__player{
+    position: relative;
+}
+
+.loadingvideo{
+    position:absolute;
+    top: 0; bottom: 25%; left: 0; right: 1.5%;
+    margin: auto;
+    z-index: 1;
+}
+
+.video{
+    position: relative;
+    z-index: 3;
+}
+
 
 
