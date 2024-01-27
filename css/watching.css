@@ -22,6 +22,10 @@ body.dark{
     background-color: #1E293B;
 }
 
+.list_ep{
+    gap: 5px;
+    flex-wrap: wrap;
+}
 
 
 
