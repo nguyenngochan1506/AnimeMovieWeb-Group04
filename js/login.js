@@ -1,4 +1,4 @@
-import { HOST_NAME } from "./utils.js";
+import { HOST_NAME, parseJwt } from "./utils.js";
 
 window.addEventListener("load", () => {
   const myForm = document.querySelector("#my-form");
@@ -11,10 +11,13 @@ window.addEventListener("load", () => {
     try {
       const data = await handleLogin(userName, password);
       localStorage.setItem("token", data.token);
+      const userId = parseJwt(data.token).id;
+      const user = await loadUserByID(userId);
+      localStorage.setItem("user", JSON.stringify(user))
       alert("Đăng nhập thành công!");
        setTimeout(() => {
         window.location.href = "index.html";
-      }, 2000);
+      }, 1000);
     } catch (error) {
       alert(error.message);
     }
@@ -38,4 +41,9 @@ const handleLogin = async (userName, password) => {
   }
 
   return response.json();
+};
+const loadUserByID = async (userId) => {
+  const response = await fetch(`${HOST_NAME}/nguoi-dung/${userId}`);
+  const data = await response.json();
+  return data;
 };

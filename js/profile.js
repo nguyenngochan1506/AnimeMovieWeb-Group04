@@ -6,17 +6,9 @@ window.addEventListener("load", () => {
     alert("Bạn chưa đăng nhập");
     window.location.href = "login.html";
   }
-  const userId = parseJwt(token).id;
-
-  handleApi(userId).then((data) => {
-    document.querySelector("#user-id").innerHTML = "#" + data.id;
-    document.querySelector("#name").innerHTML = data.userName;
-    document.querySelector("#my-email").innerHTML = data.email;
-    document.querySelector('.user-image img').setAttribute('src', data.avatar)
-  });
+  const user = JSON.parse(localStorage.getItem('user'));
+  document.querySelector("#user-id").innerHTML = "#" + user.id;
+  document.querySelector("#name").innerHTML = user.userName;
+  document.querySelector("#my-email").innerHTML = user.email;
+  document.querySelector('.user-image img').setAttribute('src', user.avatar)
 });
-const handleApi = async (userId) => {
-  const response = await fetch(`${HOST_NAME}/nguoi-dung/${userId}`);
-  const data = await response.json();
-  return data;
-};
