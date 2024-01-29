@@ -39,6 +39,9 @@ window.onload = () => {
       document
         .querySelector(".anime__video__player iframe")
         .setAttribute("src", source);
+        document
+        .querySelector(".dialogDarkMode iframe")
+        .setAttribute("src", source);
       document.querySelector(
         ".currentEp"
       ).innerHTML = `Đang xem tập ${episodeNumber}`;
