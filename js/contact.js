@@ -95,9 +95,9 @@ const showProfile = () => {
                     <ul class="dropdown-menu text-small shadow" >
                     <li><span class="dropdown-item">Xin Chào: <strong>${user.userName}</strong></span></li>
                     <hr/>
-                      <li><a class="dropdown-item" href="./../profile.html">Thông Tin Cá Nhân</a></li>
-                      <li><a class="dropdown-item" href="./../anime-favorite.html">Danh Sách Yêu Thích</a></li>
-                      ${decode?.isAdmin ? '<li><a class="dropdown-item" href="./../admin-page-home.html">Quản Lý Phim</a></li>' : ''}
+                      <li><a class="dropdown-item" href="./profile.html">Thông Tin Cá Nhân</a></li>
+                      <li><a class="dropdown-item" href="./anime-favorite.html">Danh Sách Yêu Thích</a></li>
+                      ${decode?.isAdmin ? '<li><a class="dropdown-item" href="./admin-page-home.html">Quản Lý Phim</a></li>' : ''}
                       <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item btn-logout" href="#">Đăng Xuất</a></li>
                     </ul>
