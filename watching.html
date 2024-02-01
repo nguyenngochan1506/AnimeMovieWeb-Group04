@@ -56,9 +56,7 @@
 
     <!-- dialog dark mode -->
     <section class="dialogDarkMode">
-        <iframe id="youtube-iframe" width="860px" height="600"
-            src="" title="YouTube video player"
-            frameborder="0"
+        <iframe id="youtube-iframe" width="860px" height="600" src="" title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
     </section>
@@ -103,8 +101,9 @@
                     <div class="anime__video__player text-center ">
                         <div class="loadingvideo spinner-border" style="width: 3rem; height: 3rem;" role="status">
                             <span class="visually-hidden">Loading...</span>
-                          </div>
-                        <iframe class="video" width="100%" height="600" src="" title="YouTube video player" frameborder="0"
+                        </div>
+                        <iframe class="video" width="100%" height="600" src="" title="YouTube video player"
+                            frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen></iframe>
 
@@ -149,76 +148,26 @@
                             </div>
                         </div>
                         <div>
-                            <a href="/dang-nhap" class="btn btn-danger p-2 mb-3"> Đăng nhập để bình luận </a>
-                        </div>
+                            <div class="form_submit">
+                                <form id="form-comment">
+                                    <div class="container_comment container-fluid d-flex flex-column align-items-center">
+                                        <textarea style="width: 800px; background-color: #1E293B; color: #fff; " name="comment" placeholder="Comment ... "
+                                            class="anime__watching-comment mb-3 p-3" maxlength="400"
+                                            rows="3"></textarea>
+                                        <button type="submit" class="btn btn-danger submit_gui  ms-auto">
+                                            <i class="fa fa-location-arrow"></i> Gửi
+                                        </button>
+                                    </div>
+                                </form>
 
-                        <div class="list_comment p-">
-                            <div class="user__comment d-flex align-items-start mt-1 rounded align-items-center"
-                                style="background-color: #94b8f3;">
-                                <img class="user__avatar rounded " style="width: 3rem; height: 3rem; margin-left: 1rem;"
-                                    src="./img/hero/hero-1.jpg" alt="">
-                                <div class="comment d-flex flex-column" style="margin-left: 1rem;">
-                                    <div class="nickname d-flex align-items-start text-success fw-bolder"
-                                        style="font-size: 15px;">Manhdz</div>
-                                    <div class="content d-flex align-items-start" style="font-size: 14px;">!Hay quá ,
-                                        !tuyệt quá , !xuất sắc quá </div>
-                                    <div class="time d-flex align-items-start" style="font-size: 12px;">10 giờ trước
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="user__comment d-flex align-items-start mt-1 rounded align-items-center"
-                                style="background-color: #94b8f3;">
-                                <img class="user__avatar rounded " style="width: 3rem; height: 3rem; margin-left: 1rem;"
-                                    src="./img/hero/hero-1.jpg" alt="">
-                                <div class="comment d-flex flex-column" style="margin-left: 1rem;">
-                                    <div class="nickname d-flex align-items-start text-success fw-bolder"
-                                        style="font-size: 15px;">Manhdz</div>
-                                    <div class="content d-flex align-items-start" style="font-size: 14px;">!Hay quá ,
-                                        !tuyệt quá , !xuất sắc quá .</div>
-                                    <div class="time d-flex align-items-start" style="font-size: 12px;">10 giờ trước
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="user__comment d-flex align-items-start mt-1 rounded align-items-center"
-                                style="background-color: #94b8f3;">
-                                <img class="user__avatar rounded " style="width: 3rem; height: 3rem; margin-left: 1rem;"
-                                    src="./img/hero/hero-1.jpg" alt="">
-                                <div class="comment d-flex flex-column" style="margin-left: 1rem;">
-                                    <div class="nickname d-flex align-items-start text-success fw-bolder"
-                                        style="font-size: 15px;">Manhdz</div>
-                                    <div class="content d-flex align-items-start" style="font-size: 14px;">!Hay quá ,
-                                        !tuyệt quá , !xuất sắc quá. </div>
-                                    <div class="time d-flex align-items-start" style="font-size: 12px;">10 giờ trước
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="user__comment d-flex align-items-start mt-1 rounded align-items-center"
-                                style="background-color: #94b8f3;">
-                                <img class="user__avatar rounded " style="width: 3rem; height: 3rem; margin-left: 1rem;"
-                                    src="./img/hero/hero-1.jpg" alt="">
-                                <div class="comment d-flex flex-column" style="margin-left: 1rem;">
-                                    <div class="nickname d-flex align-items-start text-success fw-bolder"
-                                        style="font-size: 15px;">Manhdz</div>
-                                    <div class="content d-flex align-items-start" style="font-size: 14px;">!Hay quá ,
-                                        !tuyệt quá , !xuất sắc quá .</div>
-                                    <div class="time d-flex align-items-start" style="font-size: 12px;">10 giờ trước
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="user__comment d-flex align-items-start mt-1 rounded align-items-center"
-                            style="background-color: #94b8f3;">
-                            <img class="user__avatar rounded " style="width: 3rem; height: 3rem; margin-left: 1rem;"
-                                src="./img/hero/hero-1.jpg" alt="">
-                            <div class="comment d-flex flex-column" style="margin-left: 1rem;">
-                                <div class="nickname d-flex align-items-start text-success fw-bolder"
-                                    style="font-size: 15px;">Manhdz</div>
-                                <div class="content d-flex align-items-start" style="font-size: 14px;">!Hay quá , !tuyệt
-                                    quá , !xuất sắc quá. </div>
-                                <div class="time d-flex align-items-start" style="font-size: 12px;">10 giờ trước</div>
                             </div>
                         </div>
 
+                        <div class="list_comment">
+                            <div class="spinner-border text-danger m-3" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </div>
                     </div>
                     <!-- end comment -->
 
