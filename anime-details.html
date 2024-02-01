@@ -85,86 +85,22 @@
       </div>
       <div class="row">
         <div class="col-lg-8 col-md-8 mx-auto">
+          <div class="section-title mt-5 mb-5">
+            <h4>Nhận xét</h4>
+          </div>
           <div class="anime__details__review">
-            <div class="section-title mt-5 mb-5">
-              <h4>Nhận xét</h4>
+            <!-- comment -->
+            <div class="spinner-border text-danger" role="status">
+              <span class="sr-only">Loading...</span>
             </div>
-            <div class="anime__review__item d-flex align-items-start mb-3">
-              <div class="anime__review__item__pic">
-                <img src="img/anime/review-1.jpg" alt="" />
-              </div>
-              <div class="anime__review__item__text">
-                <h6 class="fw-bold">
-                  Trần Văn Nam - <span>30 phút trước </span>
-                </h6>
-                <p>
-                  Phim này thực sự làm tôi bất ngờ, không ngờ nó lại hay đến
-                  vậy. Cốt truyện hấp dẫn và diễn xuất của các diễn viên xuất
-                  sắc.
-                </p>
-              </div>
-            </div>
-            <div class="anime__review__item d-flex align-items-start mb-3">
-              <div class="anime__review__item__pic">
-                <img src="img/anime/review-2.jpg" alt="" />
-              </div>
-              <div class="anime__review__item__text">
-                <h6 class="fw-bold">
-                  Nguyễn Thị Bình - <span> 1 giờ trước</span>
-                </h6>
-                <p>
-                  Chất lượng hình ảnh và âm thanh của phim rất tốt. Cảm ơn đội
-                  ngũ làm phim đã tạo ra một tác phẩm xuất sắc như vậy.
-                </p>
-              </div>
-            </div>
-            <div class="anime__review__item d-flex align-items-start mb-3">
-              <div class="anime__review__item__pic">
-                <img src="img/anime/review-4.jpg" alt="" />
-              </div>
-              <div class="anime__review__item__text">
-                <h6 class="fw-bold">
-                  Phạm Thị Mai - <span>3 giờ trước</span>
-                </h6>
-                <p>
-                  Mình thích cách tác giả xây dựng những nhân vật, mỗi người
-                  đều có đặc điểm riêng và đóng góp vào câu chuyện một cách ý
-                  nghĩa.
-                </p>
-              </div>
-            </div>
-            <div class="anime__review__item d-flex align-items-start mb-3">
-              <div class="anime__review__item__pic">
-                <img src="img/anime/review-5.jpg" alt="" />
-              </div>
-              <div class="anime__review__item__text">
-                <h6 class="fw-bold">
-                  Nguyễn Đức Anh - <span>3 giờ trước</span>
-                </h6>
-                <p>
-                  Cảm nhận của tôi sau khi xem xong chỉ có một từ: xuất sắc!
-                  Rất mong sẽ có nhiều tác phẩm hay khác từ đội ngũ làm phim.
-                </p>
-              </div>
-            </div>
-            <div class="anime__review__item d-flex align-items-start mb-3">
-              <div class="anime__review__item__pic">
-                <img src="img/anime/review-6.jpg" alt="" />
-              </div>
-              <div class="anime__review__item__text">
-                <h6 class="fw-bold">
-                  Đặng Văn Trung - <span>18 năm trước</span>
-                </h6>
-                <p>Phim hay quá, cuối cùng cũng ra tập mới.</p>
-              </div>
             </div>
           </div>
           <div class="anime__details__form">
             <div class="section-title mt-3 mb-3">
               <h4>Nhận xét của bạn</h4>
             </div>
-            <form action="#">
-              <textarea placeholder="Điền vào đây cảm nghĩ của bạn sau khi thử đầm ... "
+            <form id="my-form-comment">
+              <textarea name="comment" placeholder="Điền vào đây cảm nghĩ của bạn sau khi thử đầm ... "
                 class="anime__details-comment mb-3 p-3" maxlength="300" rows="4"></textarea>
               <button type="submit" class="btn btn-danger">
                 <i class="fa fa-location-arrow"></i> Gửi nhận xét
