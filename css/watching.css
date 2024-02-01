@@ -1,47 +1,52 @@
-
 * {
-    font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    ;
+  font-family: Nunito, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
 }
 
-.section-title{
-    text-align: center;
-    border-bottom: 1px dashed white; /* Màu đường và kiểu đường gạch */
-    line-height: 0.1em; /* Để đường gạch được căn giữa */
-    margin: 10px 0; /* Khoảng cách trên và dưới đường gạch */
+.section-title {
+  text-align: center;
+  border-bottom: 1px dashed white; /* Màu đường và kiểu đường gạch */
+  line-height: 0.1em; /* Để đường gạch được căn giữa */
+  margin: 10px 0; /* Khoảng cách trên và dưới đường gạch */
 }
 
-.user__avatar{
-    border: solid;
-    border-color: black;
+.user__avatar {
+  border: solid;
+  border-color: black;
 }
 
 /* dark mode */
 
-body.dark{
-    background-color: #1E293B;
+body.dark {
+  background-color: #1e293b;
 }
 
-.list_ep{
-    gap: 5px;
-    flex-wrap: wrap;
+.list_ep {
+  gap: 5px;
+  flex-wrap: wrap;
 }
 
-.anime__video__player{
-    position: relative;
+.anime__video__player {
+  position: relative;
 }
 
-.loadingvideo{
-    position:absolute;
-    top: 0; bottom: 25%; left: 0; right: 1.5%;
-    margin: auto;
-    z-index: 1;
+.loadingvideo {
+  position: absolute;
+  top: 0;
+  bottom: 25%;
+  left: 0;
+  right: 1.5%;
+  margin: auto;
+  z-index: 1;
 }
 
-.video{
-    position: relative;
-    z-index: 3;
+.video {
+  position: relative;
+  z-index: 3;
 }
 
-
-
+.anime__watching-comment::placeholder {
+  color: #fff; /* Set the placeholder text color to white */
+}
