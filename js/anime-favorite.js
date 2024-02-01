@@ -1,13 +1,24 @@
 import { HOST_NAME } from "./utils.js";
 
 window.addEventListener('load', async () => {
+    const user = localStorage.getItem('user');
+    if(!user){
+        alert('Vui lòng đăng nhập')
+        window.location.href = './index.html'
+        return;
+    }
+
+    const userId = JSON.parse(user).id;
+    document.querySelector('.group-anime').innerHTML = `<div class="spinner-border text-light" style="width: 4rem; height: 4rem;" role="status">
+                                                            <span class="visually-hidden">Loading...</span>
+                                                        </div>`
     const urlAnimeList = [];
-    const response1 = await handleAnimeFavorite().then(animefavorite => {
+    const response1 = await handleAnimeFavorite(userId).then(animefavorite => {
         animefavorite.forEach(fa => {
             urlAnimeList.push(fa._links.anime.href)
         });
     })
-    console.log(urlAnimeList);
+    document.querySelector('.group-anime').innerHTML = '';
     urlAnimeList.map(url =>{
         const urlObject = new URL(url);
         const path = urlObject.pathname;
@@ -20,30 +31,35 @@ window.addEventListener('load', async () => {
             return data.json();
         }).then(data=>{
             const myHtml = `
-                <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="product__item">
-                <img
-                  class="product__item__pic set-bg"
-                  src="${data.coverImage}"
-                />
-                <div class="ep">18 / 18</div>
-                <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                <div class="view"><i class="fa fa-eye"></i> ${data.view}</div>
-                <div class="product__item__text">
-                  <h5><a href="#">${data.name}</a></h5>
+            <div class=" list-anime-item col-lg-3 col-md-4 col-sm-6 position-relative p-0 mb-5 ms-xl-0 me-xl-0 me-sm-3 ms-sm-3 me-md-3 ms-md-3" data-anime-id="${data.id}">
+            <img src="${data.coverImage}" class="img-fluid" alt="${data.name}">
+            <div class="information">
+                <div class="my-card-title fs-4">${data.name}</div>
+                <div class="my-episodes-view d-flex justify-content-between align-items-center pe-2">
+                    <span class="my-episodes fw-light">${data.type}</span>
+                    <span class="my-view fw-light">Lượt xem: ${data.view}</span>
                 </div>
-              </div>
             </div>
+        </div>
                 `
                 document.querySelector('.group-anime').innerHTML += myHtml;
+        }).then(()=>{
+            //link đến trang details
+            document.querySelectorAll('[data-anime-id]').forEach(ele =>{
+                const animeId = ele.getAttribute('data-anime-id');
+                ele.style.cursor = 'pointer'
+                ele.addEventListener('click', ()=>{
+                  window.location.href = `./anime-details.html?animeId=${animeId}`
+                })
+              })
         })
     })
 })
 
-const handleAnimeFavorite = async () => {
+const handleAnimeFavorite = async (userId) => {
     const token = localStorage.getItem('token')
     try {
-        const response = await fetch(`${HOST_NAME}/danh-sach-yeu-thich/search/findAllByUser_Id?userId=2`, {
+        const response = await fetch(`${HOST_NAME}/danh-sach-yeu-thich/search/findAllByUser_Id?userId=${userId}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",

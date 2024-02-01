@@ -13,7 +13,7 @@ window.addEventListener("load", () => {
       localStorage.setItem("token", data.token);
       const userId = parseJwt(data.token).id;
       const user = await loadUserByID(userId);
-      localStorage.setItem("user", JSON.stringify(user))
+      localStorage.setItem("user", JSON.stringify(user))  //lưu thông tin người dùng vào localstorage
       alert("Đăng nhập thành công!");
        setTimeout(() => {
         window.location.href = "index.html";

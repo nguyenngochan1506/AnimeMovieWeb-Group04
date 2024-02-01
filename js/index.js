@@ -32,7 +32,7 @@ window.addEventListener("load", async () => {
                     <div class="information">
                         <div class="my-card-title fs-4">${anime.name}</div>
                         <div class="my-episodes-view d-flex justify-content-between align-items-center pe-2">
-                            <span class="my-episodes fw-light">${anime.category}</span>
+                            <span class="my-episodes fw-light">${anime.type}</span>
                             <span class="my-view fw-light">Lượt xem: ${anime.view}</span>
                         </div>
                     </div>
@@ -81,7 +81,6 @@ const handleLoadMore = async (page) => {
     }
 
     const newData = await response.json();
-    console.log(newData);
 
     // Thêm 6 bộ phim mới vào cuối dữ liệu hiện tại
     data._embedded.animes = data._embedded.animes.concat(
@@ -114,6 +113,14 @@ const handleLoadMore = async (page) => {
 
     document.getElementById("button_xemthem").innerHTML = "Xem Thêm"
 
+
+    document.querySelectorAll('[data-anime-id]').forEach(ele =>{
+      const animeId = ele.getAttribute('data-anime-id');
+      ele.style.cursor = 'pointer'
+      ele.addEventListener('click', ()=>{
+        window.location.href = `./anime-details.html?animeId=${animeId}`
+      })
+    })
   } catch (error) {
     console.error("Lỗi. Lỗi rồi huhuhu", error);
     document.getElementById("button_xemthem").innerHTML = "Xem Thêm"

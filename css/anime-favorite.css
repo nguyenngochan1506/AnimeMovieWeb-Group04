@@ -114,3 +114,43 @@
   background-color: #dacb46;
   color: #1e293b;
 }
+
+.information {
+  width: 100%;
+  padding: 0;
+  color: #fff;
+  font-weight: 600;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), #000);
+}
+.information .my-episodes-view {
+  font-size: small;
+  position: relative;
+}
+.list-anime-item{
+  width: max-content;
+}
+@media screen and (min-width:1400px) {
+  .information {
+      width: 100%;
+      padding: 0;
+      color: #fff;
+      font-weight: 600;
+      position: absolute;
+      bottom: 0;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), #000);
+  }
+}
+
+@media screen and (max-width:376px) {
+  .information {
+      width: 80%;
+      padding: 0;
+      color: #fff;
+      font-weight: 600;
+      position: absolute;
+      bottom: 0;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), #000);
+  }
+}

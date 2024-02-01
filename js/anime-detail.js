@@ -3,11 +3,26 @@ window.onload = () => {
     //lay id anime tu url 
     const animeId = getParamUrl('animeId')
     const token = localStorage.getItem('token')
+    
     if(token){
+        const userId = JSON.parse(localStorage.getItem('user')).id;
         document.querySelector('#my-form-comment').addEventListener('submit', (e)=> handleSubmitComment(e, animeId))
+        //check anime đã có trong favorite list chưa
+        checkAnimeExistsInFavorite(animeId, userId).then(data=>{
+            const btnFollow = document.querySelector('.follow-btn');
+            if(data){
+                btnFollow.innerHTML='<i class="fa fa-heart"></i> Đã yêu thích!'
+                btnFollow.addEventListener('click', ()=>handleUpdateFavorite('REMOVE', animeId, userId))
+            }else{
+                btnFollow.innerHTML='<i class="fa fa-heart-o"></i> Yêu thích!'
+                btnFollow.addEventListener('click', ()=>handleUpdateFavorite('ADD', animeId, userId))
+            }
+        })
     }else{
-
         document.querySelector('#my-form-comment').innerHTML = '<span>Vui lòng đăng nhập để bình luận <a class="btn btn-danger" href="./login.html">Đăng Nhập</a> </span>';
+        document.querySelector('.follow-btn').addEventListener('click', ()=>{
+            alert('Vui lòng đăng nhập trước khi thêm!')
+        })
     }
 
     fetch(`${HOST_NAME}/anime/${animeId}`)
@@ -23,6 +38,7 @@ window.onload = () => {
                 window.location.href = `./watching.html?animeId=${data.id}&tap=1`
             })
         })
+
 
     getAllComment(animeId).then(data => {
         let customHtml = '';
@@ -49,6 +65,47 @@ window.onload = () => {
     
 }
 
+const handleUpdateFavorite = async (action, animeId, userId)=>{
+    const btnFollow = document.querySelector('.follow-btn');
+    
+    if(action === 'REMOVE'){
+        btnFollow.innerHTML = '<i class="fa fa-heart-o"></i> Yêu thích!';
+        const response = await fetch(`${HOST_NAME}/user/danh-sach-yeu-thich?animeId=${animeId}&userId=${userId}`,{
+            method:"DELETE",
+            headers:{
+                "Content-Type":"Application/json"
+            }
+        })
+        const data = await response.json();
+
+    }else if(action === 'ADD'){
+        btnFollow.innerHTML = '<i class="fa fa-heart"></i> Đã yêu thích!'
+        const response = await fetch(`${HOST_NAME}/danh-sach-yeu-thich`,{
+            method:"POST",
+            headers:{
+                "Content-Type":"Application/json"
+            },
+            body: JSON.stringify({
+                anime:`anime/${animeId}`,
+                user:`user/${userId}`
+            })
+        })
+        const data = await response.json();
+    }
+}
+
+const checkAnimeExistsInFavorite = async (animeId, userId) => {
+    console.log(animeId, userId);
+    const response = await fetch(`${HOST_NAME}/danh-sach-yeu-thich/search/existsByAnime_IdAndUser_Id?userId=${userId}&animeId=${animeId}`, {
+        method:"GET",
+        headers:{
+            "Content-Type":"Application/json"
+        }
+    })
+    const data = await response.json();
+    return data;
+}
+
 const handleSubmitComment = async (e, animeId) =>{
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
@@ -73,7 +130,7 @@ const handleSubmitComment = async (e, animeId) =>{
         })
         const data = await response.json();
         alert("Bạn đã comment")
-        console.log(data);
+        window.location.reload()
     } catch (error) {
         console.log(error);
     }
