@@ -1,4 +1,4 @@
-import { HOST_NAME, getAllCategories, getBase64, getCategoriesOfAnime } from './utils.js'
+import { HOST_NAME, getAllCategories, getBase64, getCategoriesOfAnime, parseJwt } from './utils.js'
 
 const token = localStorage.getItem('token');
 getAllCategories().then(data => {
