@@ -90,7 +90,7 @@ const getAnime = async ()=>{
                 <div class="my-card-title fs-4">${anime.name}</div>
                 <div class="my-episodes-view d-flex justify-content-between align-items-center pe-2">
                     <span class="my-episodes fw-light">${anime.type}</span>
-                    <span class="my-view fw-light">Lượt xem: ${anime.view}</span>
+                    <span class="my-view fw-light">Lượt xem: ${anime.view.toLocaleString()}</span>
                 </div>
             </div>
         </div>

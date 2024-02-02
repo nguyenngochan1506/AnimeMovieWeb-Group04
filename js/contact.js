@@ -1,4 +1,4 @@
-import { HOST_NAME, debounce, parseJwt } from "./utils.js";
+import { HOST_NAME, debounce, getRndInteger, parseJwt } from "./utils.js";
 
 window.addEventListener('load', () => {
     // xử lý phần biểu mẫu
@@ -13,6 +13,12 @@ window.addEventListener('load', () => {
 
     //search
     document.querySelector('#tim-kiem').addEventListener('input', debounce(handleSearch, 500))
+
+    //giả lập người dùng đang online
+    setInterval(()=>{
+        let randomNumber  = getRndInteger(900,1000)
+        document.querySelector('#current-user-online').innerHTML = randomNumber;
+    },1500)
 })
 
 const handleSearch = async (e) => {

@@ -102,6 +102,12 @@ const handleSubmitUpdate = async (e, animeId, img) => {
     const confirmed = window.confirm(`Bạn có chắc chắn muốn thay đổi id ${animeId} không!`)
     if (!confirmed) return;
 
+    document.querySelector('#btn-update-submit').innerHTML = `
+    <div class="spinner-border text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+`
+
     const anime = Object.fromEntries(formData);
     const categories = formData.getAll('categoryList').map(category => `the-loai/${category}`)
     const file = formData.get('coverImage');
@@ -127,7 +133,7 @@ const handleSubmitUpdate = async (e, animeId, img) => {
     } catch (error) {
         alert("đã xảy ra lỗi!")
     }
-
+    document.querySelector('#btn-update-submit').innerHTML = `Cập Nhật Thành Công`
 }
 
 const handleUpdateAnime = async (animeInfo) => {

@@ -37,7 +37,7 @@ window.addEventListener('load', async () => {
                 <div class="my-card-title fs-4">${data.name}</div>
                 <div class="my-episodes-view d-flex justify-content-between align-items-center pe-2">
                     <span class="my-episodes fw-light">${data.type}</span>
-                    <span class="my-view fw-light">Lượt xem: ${data.view}</span>
+                    <span class="my-view fw-light">Lượt xem: ${data.view.toLocaleString()}</span>
                 </div>
             </div>
         </div>

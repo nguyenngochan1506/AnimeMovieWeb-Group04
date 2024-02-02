@@ -8,7 +8,9 @@ function parseJwt(token) {
 
     return JSON.parse(jsonPayload);
 }
-
+const getRndInteger = (min, max) => {
+    return Math.floor(Math.random() * (max - min) ) + min;
+  }
 const getParamUrl = (param) => {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
@@ -70,4 +72,4 @@ const getCategoriesOfAnime = async (animeId)=>{
     }
 }
 
-export { HOST_NAME, parseJwt, getParamUrl, debounce ,getAllCategories, getCategoriesOfAnime, getBase64};
+export { HOST_NAME, parseJwt, getParamUrl, debounce ,getAllCategories, getCategoriesOfAnime, getBase64,getRndInteger};
