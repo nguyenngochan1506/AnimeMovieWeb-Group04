@@ -4,7 +4,7 @@ window.addEventListener("load", () => {
   const myForm = document.querySelector("#my-form");
   myForm.addEventListener("submit", async (e) => {
     e.preventDefault();
-
+ 
     let userName = document.querySelector("#ten-dang-nhap").value;
     let password = document.querySelector("#mat-khau").value;
 
@@ -25,6 +25,11 @@ window.addEventListener("load", () => {
 });
 
 const handleLogin = async (userName, password) => {
+  document.querySelector('#btn-login').innerHTML = `
+  <div class="spinner-border text-white" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+  `;
   const response = await fetch(`${HOST_NAME}/user/login`, {
     method: "POST",
     headers: {
@@ -37,9 +42,10 @@ const handleLogin = async (userName, password) => {
   });
 
   if (!response.ok) {
+    document.querySelector('#btn-login').innerHTML = `Đăng Nhập`;
     throw new Error("Sai tên đăng nhập hoặc mật khẩu");
   }
-
+  document.querySelector('#btn-login').innerHTML = `Đăng Nhập`;
   return response.json();
 };
 const loadUserByID = async (userId) => {
