@@ -1,6 +1,10 @@
 import { HOST_NAME, debounce, getRndInteger, parseJwt } from "./utils.js";
 
 window.addEventListener('load', () => {
+    // active các link mà người dùng ấn
+    hanldeActiveNavLink();
+
+
     // xử lý phần biểu mẫu
     document.querySelector('.icon-close').addEventListener('click', () => closeContact());
     document.querySelector('.show-contact').addEventListener('click', () => showContact());
@@ -15,11 +19,31 @@ window.addEventListener('load', () => {
     document.querySelector('#tim-kiem').addEventListener('input', debounce(handleSearch, 500))
 
     //giả lập người dùng đang online
-    setInterval(()=>{
-        let randomNumber  = getRndInteger(900,1000)
+    setInterval(() => {
+        let randomNumber = getRndInteger(900, 1000)
         document.querySelector('#current-user-online').innerHTML = randomNumber;
-    },1500)
+    }, 1500)
 })
+
+const hanldeActiveNavLink = () => {
+    const path = window.location.pathname;
+    console.log(path === '/index.html');
+    switch (path) {
+        case '/':
+        case '/index.html':
+            document.querySelector('[href="index.html"]').classList.add('fw-bold')
+            break;
+        case '/category.html':
+            document.querySelector('[href="category.html"]').classList.add('fw-bold')
+            break;
+        case '/group-diary.html':
+            document.querySelector('[href="group-diary.html"]').classList.add('fw-bold')
+            break;
+        case '/about.html':
+            document.querySelector('[href="about.html"]').classList.add('fw-bold')
+            break;
+    }
+}
 
 const handleSearch = async (e) => {
     const keyword = e.target.value;
