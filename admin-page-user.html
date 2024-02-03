@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quản người dùng</title>
+    <title>ADMIN PAGE</title>
     <link rel="stylesheet" href="./bootstrap-5.3.2-dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/admin-page-anime.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -34,11 +34,11 @@
                             Home
                         </a>
                         <a href="./admin-page-user.html" class="nav-link week-link text-white active" aria-current="page">
-                            Quản lý người dùng
+                            User Management
                         </a>
                         <a href="./admin-page-anime.html" class="nav-link week-link text-white "
                             aria-current="page">
-                            Quản lý anime
+                            Anime Management
                         </a>
                     </li>
                 </ul>
@@ -46,13 +46,13 @@
         </div>
         <!-- end sidebar -->
         <div class="col-8 my-table">
-            <h1 class="text-white text-center mt-5 mb-4">Quản Lý Người Dùng</h1>
+            <h1 class="text-white text-center mt-5 mb-4">User Management</h1>
             <div class="row">
                 <div class="col-6 mb-2">
                     <div class="input-group">
-                        <input type="search" class="form-control rounded" id="input-search" placeholder="Tìm Kiếm Người Dùng"
+                        <input type="search" class="form-control rounded" id="input-search" placeholder="Search for user"
                             aria-label="Search" aria-describedby="search-addon" />
-                        <button type="button" class="btn btn-outline-primary " id="btn-search">Tìm Kiếm</button>
+                        <button type="button" class="btn btn-outline-primary " id="btn-search">Search</button>
                     </div>
                 </div>
             </div>
@@ -60,10 +60,10 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>TÊN NGƯỜI DÙNG</th>
-                        <th>TÊN ĐĂNG NHẬP</th>
-                        <th>EMAIL</th>
-                        <th>HÀNH ĐỘNG</th>
+                        <th>Fullname</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -86,7 +86,7 @@
         <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@2.0.1/dist/js/multi-select-tag.js"></script>
         <script type="module" src="./js/admin-page-user.js"></script>
         <script>
-            //phần include header and footer
+            // include header and footer
             const header = document.querySelector("#header-include");
             const footer = document.querySelector("#footer-include");
 

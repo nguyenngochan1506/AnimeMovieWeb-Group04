@@ -4,8 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thể Loại</title>
-
+  <title>Category</title>
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
@@ -30,8 +29,8 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="breadcrumb__links">
-            <a href="./index.html"><i class="fa fa-home"></i> Trang Chủ</a>
-            <a href="./category.html"> > Thể Loại</a>
+            <a href="./home.html"><i class="fa fa-home"></i> Home Page</a>
+            <a href="./category.html"> > Category</a>
           </div>
         </div>
       </div>
@@ -44,16 +43,16 @@
     <div class="container">
       <div class="row d-flex align-items-end pt-3">
         <div class="col-lg-2 d-flex flex-column align-items-start row-gap-2">
-          <span>Thể loại</span>
+          <span>Genre</span>
           <select id="categories-filter" name="categories" class="category-filter">
-            <option value="" selected>Tất cả</option>
+            <option value="" selected>All</option>
             <!-- Category -->
           </select>
         </div>
         <div class="col-lg-2 d-flex flex-column align-items-start row-gap-2">
-          <span>Năm phát hành</span>
+          <span>Release Year</span>
           <select id="release-year-filter" id="category-filter">
-            <option value="">Tất cả</option>
+            <option value="">All</option>
             <option value="2020">2020</option>
             <option value="2021">2021</option>
             <option value="2022">2022</option>
@@ -63,15 +62,15 @@
           </select>
         </div>
         <div class="col-lg-2 d-flex flex-column align-items-start row-gap-2">
-          <span>Sắp xếp</span>
+          <span>Sort By:</span>
           <select id="sort-filter" name="sort" id="category-filter">
-            <option value="view" selected>Lượt xem</option>
-            <option value="releaseYear">Năm</option>
+            <option value="view" selected>Views</option>
+            <option value="releaseYear">Release Year</option>
           </select>
         </div>
         <div class="col-lg-2">
           <button type="submit" class="btn btn-danger filter-btn">
-            Duyệt Phim
+            Search
           </button>
         </div>
       </div>
@@ -85,11 +84,11 @@
       <div class="container">
         <div class="category-content">
           <h1 class="category-title">
-            DANH SÁCH ANIME THEO THỂ LOẠI
+            ANIME LIST BY GENRE
           </h1>
           <div class="row g-5 col-lg-12 group-anime justify-content-evenly">
           
-            <!-- Danh sach anime -->
+            <!-- anime list -->
            <div style="width: 50px;">
             <div class="spinner-border text-success" role="status">
               <span class="visually-hidden">Loading...</span>
@@ -114,7 +113,7 @@
   <div class="container-fluid" id="footer-include"></div>
   <!-- Footer End -->
   <script>
-    //phần include header and footer
+    // include header and footer
     const header = document.querySelector("#header-include");
     const footer = document.querySelector("#footer-include");
     fetch('./component/nav.html').then(response => response.text()).then(html => header.innerHTML = html)

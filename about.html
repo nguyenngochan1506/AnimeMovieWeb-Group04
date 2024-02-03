@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trang chủ</title>
+    <title>About Us</title>
     <link rel="stylesheet" href="./bootstrap-5.3.2-dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/about.css" />
     <link rel="stylesheet" href="./css/contact.css">
@@ -12,7 +12,7 @@
 </head>
 
 <body class="custom-bg">
-    <!-- Phần nav -->
+    <!-- Header -->
     <header class="container-fluid p-1 text-bg-dark position-fixed z-3 top-0" id="header-include">
     </header>
 
@@ -26,9 +26,8 @@
                 <div><img class="about-img rounded" src="img/members/nguyen-ngoc-han.jpg" alt=""></div>
                 <div>
                     <h4 style="color: black;">22130071 - Nguyễn Ngọc Hân</h4>
-                    <h6 class="d-flex justify-content-center" style="color: black;">Lớp: DH22DTB</h6>
-                    <h6 class="d-flex justify-content-center" style="color: black;">Sở thích: Âm nhạc, chơi game, tập
-                        thể dục</h6>
+                    <h6 class="d-flex justify-content-center" style="color: black;">Class: DH22DTB</h6>
+                    <h6 class="d-flex justify-content-center" style="color: black;">Interests: Music, Gaming, Exercise</h6>
                 </div>
                 <div></div>
             </div>
@@ -36,8 +35,8 @@
                 <div><img class="about-img rounded" src="img/members/hlnm.jpg" alt=""></div>
                 <div>
                     <h4 style="color: black;">22130163 - Hoàng Lê Nguyên Mạnh</h4>
-                    <h6 class="d-flex justify-content-center" style="color: black;">Lớp: DH22DTA</h6>
-                    <h6 class="d-flex justify-content-center" style="color: black;">Sở thích: Code</h6>
+                    <h6 class="d-flex justify-content-center" style="color: black;">Class: DH22DTA</h6>
+                    <h6 class="d-flex justify-content-center" style="color: black;">Interests: Coding</h6>
                 </div>
                 <div></div>
             </div>
@@ -45,8 +44,8 @@
                 <div><img class="about-img rounded" src="img/members/nguyen-vu-bao.jpg" alt=""></div>
                 <div>
                     <h4 style="color: black;">22130024 - Nguyễn Vũ Bảo</h4>
-                    <h6 class="d-flex justify-content-center" style="color: black;">Lớp: DH22DTC</h6>
-                    <h6 class="d-flex justify-content-center" style="color: black;">Sở thích: Chơi game</h6>
+                    <h6 class="d-flex justify-content-center" style="color: black;">Class: DH22DTC</h6>
+                    <h6 class="d-flex justify-content-center" style="color: black;">Interests: Gaming</h6>
                 </div>
                 <div></div>
             </div>
@@ -56,8 +55,8 @@
                 <div><img class="about-img1 rounded" src="img/members/lbkd.jpg" alt=""></div>
                 <div>
                     <h4 style="color: black;">22130058 - Lê Bá Khánh Duy</h4>
-                    <h6 class="d-flex justify-content-center" style="color: black;">Lớp: DH22DTA</h6>
-                    <h6 class="d-flex justify-content-center" style="color: black;">Sở thích: K-Pop</h6>
+                    <h6 class="d-flex justify-content-center" style="color: black;">Class: DH22DTA</h6>
+                    <h6 class="d-flex justify-content-center" style="color: black;">Interests: Gaming, Music, Speedcubing </h6>
                 </div>
                 <div></div>
             </div>
@@ -66,7 +65,7 @@
                 <div>
                     <h4 style="color: black;">21130645 - Đặng Văn Trung</h4>
                     <h6 class="d-flex justify-content-center" style="color: black;">Lớp: DH21DTD</h6>
-                    <h6 class="d-flex justify-content-center" style="color: black;">Sở thích: Chơi thể thao</h6>
+                    <h6 class="d-flex justify-content-center" style="color: black;">Interests: Exercise</h6>
                 </div>
                 <div></div>
             </div>
@@ -75,12 +74,12 @@
     </div>
     <div class="row"></div>
     </div>
-    <!-- Phần footer -->
+    <!-- footer -->
     <div class="container-fluid" id="footer-include">
 
     </div>
     <script>
-        //phần include header and footer
+        // include header and footer
         const header = document.querySelector('#header-include');
         const footer = document.querySelector('#footer-include');
         fetch('./component/nav.html').then(response => response.text()).then(html => header.innerHTML = html)

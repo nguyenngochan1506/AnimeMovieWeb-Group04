@@ -27,11 +27,10 @@ window.addEventListener('load', () => {
 
 const hanldeActiveNavLink = () => {
     const path = window.location.pathname;
-    console.log(path === '/index.html');
     switch (path) {
         case '/':
-        case '/index.html':
-            document.querySelector('[href="index.html"]').classList.add('fw-bold')
+        case '/home.html':
+            document.querySelector('[href="home.html"]').classList.add('fw-bold')
             break;
         case '/category.html':
             document.querySelector('[href="category.html"]').classList.add('fw-bold')
@@ -99,7 +98,7 @@ const handleLogout = () => {
     const user = localStorage.getItem('user');
     if (token && user) {
         localStorage.clear();
-        window.location.href = './index.html'
+        window.location.href = './home.html'
         return;
     }
     alert('bạn chưa đăng nhập')
@@ -125,11 +124,11 @@ const showProfile = () => {
                     <ul class="dropdown-menu text-small shadow" >
                     <li><span class="dropdown-item">Xin Chào: <strong>${user.userName}</strong></span></li>
                     <hr/>
-                      <li><a class="dropdown-item" href="./profile.html">Thông Tin Cá Nhân</a></li>
-                      <li><a class="dropdown-item" href="./anime-favorite.html">Danh Sách Yêu Thích</a></li>
-                      ${decode?.isAdmin ? '<li><a class="dropdown-item" href="./admin-page-home.html">Quản Lý Phim</a></li>' : ''}
+                      <li><a class="dropdown-item" href="./profile.html">Information</a></li>
+                      <li><a class="dropdown-item" href="./anime-favorite.html">Favorites</a></li>
+                      ${decode?.isAdmin ? '<li><a class="dropdown-item" href="./admin-page-home.html">Admin Dashboard</a></li>' : ''}
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item btn-logout" href="#">Đăng Xuất</a></li>
+                      <li><a class="dropdown-item btn-logout" href="#">Logout</a></li>
                     </ul>
                   </div>
         `

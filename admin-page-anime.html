@@ -4,24 +4,24 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quản lí anime</title>
+    <title>ADMIN PAGE</title>
     <link rel="stylesheet" href="./bootstrap-5.3.2-dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/admin-page-anime.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/contact.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@2.0.1/dist/css/multi-select-tag.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@2.0.1/dist/css/multi-select-tag.css">
 </head>
 
 <body class="custom-bg">
     <header class="container-fluid p-1 text-bg-dark position-fixed top-0" id="header-include" style="z-index: 5;">
     </header>
 
-    
+
     <!-- content -->
-    <div class=" row my-content" 
-        <!-- sidebar -->
+    <div class=" row my-content" <!- sidebar -->
         <div class="col-3">
             <div class="d-flex flex-column flex-shrink-0 p-3 text-white custom-sidebar">
                 <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
@@ -34,11 +34,11 @@
                             Home
                         </a>
                         <a href="./admin-page-user.html" class="nav-link week-link text-white " aria-current="page">
-                            Quản lý người dùng
+                            User Management
                         </a>
                         <a href="./admin-page-anime.html" class="nav-link week-link text-white active"
                             aria-current="page">
-                            Quản lý anime
+                            Anime Management
                         </a>
                     </li>
                 </ul>
@@ -46,17 +46,17 @@
         </div>
         <!-- end sidebar -->
         <div class="col-8 my-table">
-            <h1 class="text-white text-center mt-5 mb-4">Quản Lý Anime</h1>
+            <h1 class="text-white text-center mt-5 mb-4">Anime Management</h1>
             <div class="row">
                 <div class="col-6 mb-2">
                     <div class="input-group">
                         <input type="search" class="form-control rounded" id="input-search" placeholder="Tìm Kiếm Anime"
                             aria-label="Search" aria-describedby="search-addon" />
-                        <button type="button" class="btn btn-outline-primary " id="btn-search">Tìm Kiếm</button>
+                        <button type="button" class="btn btn-outline-primary " id="btn-search">Search</button>
                     </div>
                 </div>
                 <div class="col-6 text-end">
-                    <button class=" btn btn-primary" id="btn-add-anime">Thêm Anime Mới <i class="fa fa-plus-circle"
+                    <button class=" btn btn-primary" id="btn-add-anime">Add Anime <i class="fa fa-plus-circle"
                             aria-hidden="true"></i></button>
                 </div>
             </div>
@@ -64,19 +64,19 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>TÊN ANIME</th>
-                        <th>NĂM SẢN XUẤT</th>
-                        <th>LƯỢT XEM</th>
-                        <th>HÀNH ĐỘNG</th>
+                        <th>Name</th>
+                        <th>Release Year</th>
+                        <th>Total View</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                       <td> 
-                        <div class="spinner-border text-danger" role="status">
-                            <span class="visually-hidden">Loading...</span>
+                        <td>
+                            <div class="spinner-border text-danger" role="status">
+                                <span class="visually-hidden">Loading...</span>
                             </div>
-                       </td>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -87,10 +87,11 @@
         </div>
         <!-- end content -->
         <div class="container-fluid" id="footer-include"></div>
-        <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@2.0.1/dist/js/multi-select-tag.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@2.0.1/dist/js/multi-select-tag.js"></script>
         <script type="module" src="./js/admin-page-anime.js"></script>
         <script>
-            //phần include header and footer
+            //include header and footer
             const header = document.querySelector("#header-include");
             const footer = document.querySelector("#footer-include");
 
@@ -98,9 +99,10 @@
             fetch('./component/footer.html').then(response => response.text()).then(html => footer.innerHTML = html)
         </script>
         <script src="https://unpkg.com/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
         <script src="./js/contact.js" type="module"></script>
-        
 </body>
 
 </html>

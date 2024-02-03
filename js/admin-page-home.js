@@ -10,6 +10,6 @@ window.addEventListener('load', ()=>{
       const tokenDecode = parseJwt(token);
       if (!tokenDecode.isAdmin) {
           alert('Bạn không có quyền truy cập!')
-          window.location.href = './index.html';
+          window.location.href = './home.html';
       }
 })

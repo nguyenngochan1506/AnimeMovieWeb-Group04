@@ -12,40 +12,40 @@
 </head>
 
 <body class="my-custom-bg">
-    <!-- Phần nav -->
+    <!-- Header -->
     <header class="container-fluid p-1 text-bg-dark position-fixed z-3 top-0" id="header-include"">
      </header>
     
-     <!--phần content -->
+     <!--content -->
      <div class=" row my-content">
         <div class="col-3">
             <div class="d-flex flex-column flex-shrink-0 p-3 text-white custom-sidebar">
                 <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                    <span class="fs-4 fw-bold">Công việc từng tuần</span>
+                    <span class="fs-4 fw-bold">Daily works</span>
                 </a>
                 <hr>
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">
                         <a href="#" class="nav-link week-link text-white my-active" id="week-5" aria-current="page">
-                            Tuần 5
+                            Week 5
                         </a>
                         <a href="#" class="nav-link week-link text-white " id="week-6" aria-current="page">
-                            Tuần 6
+                            Week 6
                         </a>
                         <a href="#" class="nav-link week-link text-white " id="week-7" aria-current="page">
-                            Tuần 7
+                            Week 7
                         </a>
                         <a href="#" class="nav-link week-link text-white " id="week-8" aria-current="page">
-                            Tuần 8
+                            Week 8
                         </a>
                         <a href="#" class="nav-link week-link text-white " id="week-9" aria-current="page">
-                            Tuần 9
+                            Week 9
                         </a>
                         <a href="#" class="nav-link week-link text-white " id="week-10" aria-current="page">
-                            Tuần 10
+                            Week 10
                         </a>
                         <a href="#" class="nav-link week-link text-white " id="week-99" aria-current="page">
-                            Tổng Hợp
+                            Summary
                         </a>
                     </li>
                 </ul>
@@ -58,53 +58,53 @@
                 <thead>
                     <tr>
                         <th>STT</th>
-                        <th>Công Việc</th>
-                        <th>Người Thực Hiện</th>
-                        <th>Ngày Bắt Đầu</th>
-                        <th>Ngày Kết Thúc</th>
-                        <th>Trạng thái</th>
+                        <th>Work</th>
+                        <th>Implementer</th>
+                        <th>Start day</th>
+                        <th>End day</th>
+                        <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th>#1</th>
-                        <td>Làm Chức Năng Group Diary</td>
+                        <td>Group Diary</td>
                         <td>Nguyễn Ngọc Hân</td>
                         <td>28-11-2023</td>
                         <td>30-11-2023</td>
-                        <td>Hoàn thành</td>
+                        <td>Complete</td>
                     </tr>
                     <tr>
                         <th>#2</th>
-                        <td>Làm giao diện cho trang About</td>
+                        <td>About Page interface</td>
                         <td>Lê Bá Khánh Duy</td>
                         <td>28-11-2023</td>
                         <td>30-11-2023</td>
-                        <td>Hoàn thành</td>
+                        <td>Complete</td>
                     </tr>
                     <tr>
                         <th>#3</th>
-                        <td>Làm giao diện cho trang Admin Home Page</td>
+                        <td>Admin Home Page interface</td>
                         <td>Hoàng Lê Nguyên Mạnh</td>
                         <td>28-11-2023</td>
                         <td>03-12-2023</td>
-                        <td>Hoàn thành</td>
+                        <td>Complete</td>
                     </tr>
                     <tr>
                         <th>#4</th>
-                        <td>Làm giao diện cho trang Category</td>
+                        <td>Category page interface</td>
                         <td>Đăng Văn Trung</td>
                         <td>28-11-2023</td>
                         <td>03-12-2023</td>
-                        <td>Hoàn thành</td>
+                        <td>Complete</td>
                     </tr>
                     <tr>
                         <th>#5</th>
-                        <td>Làm giao diện cho trang Admin User Manager</td>
+                        <td>Admin User Manager page interface</td>
                         <td>Nguyễn Vũ Bảo</td>
                         <td>28-11-2023</td>
                         <td>05-12-2023</td>
-                        <td>Hoàn thành</td>
+                        <td>Complete</td>
                     </tr>
                 </tbody>
               </table>
@@ -113,11 +113,11 @@
               </div>
         </div>
 
-        <!-- Phần footer -->
+        <!-- footer -->
         <div class=" container-fluid" id="footer-include">
         </div>
         <script>
-            //phần include header and footer
+            // include header and footer
             const header = document.querySelector('#header-include');
             const footer = document.querySelector('#footer-include');
             fetch('./component/nav.html').then(response => response.text()).then(html => header.innerHTML = html)

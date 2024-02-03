@@ -4,7 +4,7 @@ window.addEventListener('load', async () => {
     const user = localStorage.getItem('user');
     if(!user){
         alert('Vui lòng đăng nhập')
-        window.location.href = './index.html'
+        window.location.href = './home.html'
         return;
     }
 

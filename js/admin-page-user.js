@@ -15,7 +15,7 @@ window.addEventListener('load', () => {
     const tokenDecode = parseJwt(token);
     if (!tokenDecode.isAdmin) {
         alert('Bạn không có quyền truy cập!')
-        window.location.href = './index.html';
+        window.location.href = './home.html';
     }
     document.querySelector('#btn-search').addEventListener('click', handleSearch)
     //load anime
@@ -61,9 +61,9 @@ const handleSearch = async () => {
                 <td>${user?.userName}</td>
                 <td>${user?.email}</td>
                 <td>
-                    <button class="btn btn-success btn-update" user-info='${JSON.stringify(user)}'>Chỉnh Sửa <i class="fa fa-pencil"
+                    <button class="btn btn-success btn-update" user-info='${JSON.stringify(user)}'>Edit <i class="fa fa-pencil"
                             aria-hidden="true"></i></button>
-                    <button class="btn btn-danger btn-delete" id="btn-delete" user-id="${user.id}">Xoá <i class="fa fa-trash" aria-hidden="true"></i></button>
+                    <button class="btn btn-danger btn-delete" id="btn-delete" user-id="${user.id}">Delete <i class="fa fa-trash" aria-hidden="true"></i></button>
                 </td>
             </tr>
                 `
@@ -163,10 +163,10 @@ const handleUpdateAnime = async (userInfo) => {
             </div>
             <div class="justify-content-center row">
                 <div class="col-4">
-                    <button type="button" class="btn btn-danger w-100" id="btn-close-add-anime">Huỷ Bỏ</button>
+                    <button type="button" class="btn btn-danger w-100" id="btn-close-add-anime">Cancel</button>
                 </div>
                 <div class="col-4">
-                    <button type="submit" class="btn btn-success w-100" id="btn-update-submit">Lưu Chỉnh Sửa</button>
+                    <button type="submit" class="btn btn-success w-100" id="btn-update-submit">Confirm</button>
                 </div>
             </div>
         </form>
@@ -236,9 +236,9 @@ const handleLoadAnime = async (currentPage) => {
                     <td>${user?.userName}</td>
                     <td>${user?.email}</td>
                     <td>
-                        <button class="btn btn-success btn-update" user-info='${JSON.stringify(user)}'>Chỉnh Sửa <i class="fa fa-pencil"
+                        <button class="btn btn-success btn-update" user-info='${JSON.stringify(user)}'>Edit <i class="fa fa-pencil"
                                 aria-hidden="true"></i></button>
-                        <button class="btn btn-danger btn-delete" id="btn-delete" user-id="${user.id}">Xoá <i class="fa fa-trash" aria-hidden="true"></i></button>
+                        <button class="btn btn-danger btn-delete" id="btn-delete" user-id="${user.id}">Delete <i class="fa fa-trash" aria-hidden="true"></i></button>
                     </td>
                 </tr>
             `

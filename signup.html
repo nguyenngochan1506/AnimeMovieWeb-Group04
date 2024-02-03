@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anime | Đăng ký</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="./css/signup.css" />
     <link rel="stylesheet" href="./bootstrap-5.3.2-dist/css/bootstrap.min.css" />
 
@@ -21,7 +21,7 @@
     <div class=" container-signup">
     <div class="signup-header">
         <div class="signup-header-left">
-            <p>Đăng ký</p>
+            <p>Sign Up</p>
         </div>
         <div class="signup-header-right"></div>
     </div>
@@ -29,47 +29,47 @@
         <form class="signup" id="signup-form">
             <div>
                 <div>
-                    <h6>Tên đăng nhập</h6>
-                    <input id="userName-signup" type="text" style="color: white; padding-left: 20px" placeholder="Nhập tên đăng nhập" />
+                    <h6>Username</h6>
+                    <input id="userName-signup" type="text" style="color: white; padding-left: 20px" placeholder="Enter your username" />
                 </div>
                 <div>
-                    <h6>Mật khẩu</h6>
+                    <h6>Password</h6>
                     <input id="passWord-signup" style="color: white; padding-left: 20px" type="password" id="mau-khau"
-                        placeholder="Nhập mật khẩu của bạn" />
+                        placeholder="Enter your password" />
                 </div>
                 <div>
-                    <h6>Nhập Lại Mật khẩu</h6>
+                    <h6>Confirm Password</h6>
                     <input id="retypePass-signup" style="color: white; padding-left: 20px" type="password" id="mau-khau-nhap-lai"
-                        placeholder="Nhập lại mật khẩu của bạn" />
+                        placeholder="Re-enter your password" />
                 </div>
                 <div>
-                    <h6>Họ Tên</h6>
-                    <input id="fullName-signup" type="text" style="color: white; padding-left: 20px" placeholder="Họ Tên" />
+                    <h6>Full Name</h6>
+                    <input id="fullName-signup" type="text" style="color: white; padding-left: 20px" placeholder="Enter your full name" />
                 </div>
                 <div>
                     <h6>Email</h6>
-                    <input id="email-signup" type="email" style="color: white; padding-left: 20px" placeholder="Nhập email của bạn" />
+                    <input id="email-signup" type="email" style="color: white; padding-left: 20px" placeholder="Enter your email" />
                 </div>
             </div>
             <div class="btn-group">
                 <div>
-                    <button type="submit" class="signup-btn">Tạo tài khoản</button>
+                    <button type="submit" class="signup-btn">Create Account</button>
                 </div>
                 <div>
                     <button class="login-btn">
-                        <a href="login.html">Đã có tài khoản? Đăng nhập ngay</a>
+                        <a href="login.html">Already a member? Sign in</a>
                     </button>
                 </div>
             </div>
 
         </form>
-        <!-- Phần footer -->
+        <!-- footer -->
         <div class="container-fluid" id="footer-include">
         </div>
     </div>
     </div>
     <script>
-        //phần include header and footer
+        // include header and footer
         const header = document.querySelector('#header-include');
         const footer = document.querySelector('#footer-include');
         fetch('./component/nav.html').then(response => response.text()).then(html => header.innerHTML = html)

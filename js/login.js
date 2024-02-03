@@ -16,7 +16,7 @@ window.addEventListener("load", () => {
       localStorage.setItem("user", JSON.stringify(user))  //lưu thông tin người dùng vào localstorage
       alert("Đăng nhập thành công!");
        setTimeout(() => {
-        window.location.href = "index.html";
+        window.location.href = "home.html";
       }, 1000);
     } catch (error) {
       alert(error.message);

@@ -15,7 +15,7 @@ window.addEventListener('load', () => {
     const tokenDecode = parseJwt(token);
     if (!tokenDecode.isAdmin) {
         alert('Bạn không có quyền truy cập!')
-        window.location.href = './index.html';
+        window.location.href = './home.html';
     }
     //thêm anime
     document.querySelector('#btn-add-anime').addEventListener('click', handleAddAnime);
@@ -57,9 +57,9 @@ const handleSearch = async () => {
                 <td>${anime?.releaseYear}</td>
                 <td>${anime?.view}</td>
                 <td>
-                    <button class="btn btn-success btn-update" anime-info='${JSON.stringify(anime)}'>Chỉnh Sửa <i class="fa fa-pencil"
+                    <button class="btn btn-success btn-update" anime-info='${JSON.stringify(anime)}'>Edit <i class="fa fa-pencil"
                             aria-hidden="true"></i></button>
-                    <button class="btn btn-danger btn-delete" anime-id="${anime.id}">Xoá <i class="fa fa-trash" aria-hidden="true"></i></button>
+                    <button class="btn btn-danger btn-delete" anime-id="${anime.id}">Delete <i class="fa fa-trash" aria-hidden="true"></i></button>
                 </td>
             </tr>
                 `
@@ -208,10 +208,10 @@ const handleUpdateAnime = async (animeInfo) => {
             </div>
             <div class="justify-content-center row">
                 <div class="col-4">
-                    <button type="button" class="btn btn-danger w-100" id="btn-close-add-anime">Huỷ Bỏ</button>
+                    <button type="button" class="btn btn-danger w-100" id="btn-close-add-anime">Cancel</button>
                 </div>
                 <div class="col-4">
-                    <button type="submit" class="btn btn-success w-100">Lưu Chỉnh Sửa</button>
+                    <button type="submit" class="btn btn-success w-100">Confirm</button>
                 </div>
             </div>
         </form>
@@ -254,11 +254,11 @@ const handleLoadAnime = async (currentPage) => {
                     <th>#${anime.id}</th>
                     <td><img src="${anime?.coverImage}" height="60px" alt="thumb"/> ${anime?.name}</td>
                     <td>${anime?.releaseYear}</td>
-                    <td>${anime?.view}</td>
+                    <td>${anime?.view.toLocaleString()}</td>
                     <td>
-                        <button class="btn btn-success btn-update" anime-info='${JSON.stringify(anime)}'>Chỉnh Sửa <i class="fa fa-pencil"
+                        <button class="btn btn-success btn-update" anime-info='${JSON.stringify(anime)}'>Edit <i class="fa fa-pencil"
                                 aria-hidden="true"></i></button>
-                        <button class="btn btn-danger btn-delete" anime-id="${anime.id}">Xoá <i class="fa fa-trash" aria-hidden="true"></i></button>
+                        <button class="btn btn-danger btn-delete" anime-id="${anime.id}">Delete <i class="fa fa-trash" aria-hidden="true"></i></button>
                     </td>
                 </tr>
             `
@@ -370,10 +370,10 @@ const handleAddAnime = async () => {
             </div>
             <div class="justify-content-center row">
                 <div class="col-4">
-                    <button type="button" class="btn btn-danger w-100" id="btn-close-add-anime">Huỷ Bỏ</button>
+                    <button type="button" class="btn btn-danger w-100" id="btn-close-add-anime">Cancel</button>
                 </div>
                 <div class="col-4">
-                    <button type="submit" class="btn btn-success w-100">Thêm Mới</button>
+                    <button type="submit" class="btn btn-success w-100">Confirm</button>
                 </div>
             </div>
         </form>
