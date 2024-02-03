@@ -3,6 +3,7 @@
 import { HOST_NAME, getParamUrl } from "./utils.js";
 
 window.onload = () => {
+  // xử lý cho phân chức năng khi đăng nhập mới bình luận
   const animeId = getParamUrl("animeId");
   const ep = getParamUrl("tap");
   const token = localStorage.getItem("token");
@@ -12,10 +13,11 @@ window.onload = () => {
       .addEventListener("submit", (e) => handleSubmitComment(e, animeId));
   } else {
     document.querySelector("#form-comment").innerHTML =
-      '<a href="./login.html" class="btn btn-danger p-2 mb-3"> Đăng nhập để bình luận </a>';
+      '<a href="./login.html" class="btn btn-danger p-2 mb-3"> Login to comment </a>';
   }
+  // end
 
-  //lay id anime tu url
+  // xử lý phần load video và tên
   fetch(`${HOST_NAME}/anime/${animeId}`)
     .then((respnse) => respnse.json())
     .then((data) => {
@@ -53,13 +55,14 @@ window.onload = () => {
         .setAttribute("src", source);
       document.querySelector(
         ".currentEp"
-      ).innerHTML = `Đang xem tập ${episodeNumber}`;
+      ).innerHTML = `Watching episode ${episodeNumber}`;
       document
         .querySelector(".btn_next")
         .addEventListener("click", () => handleBtnNext(ep, animeId));
     });
+  // end
 
-    //lay id anime tu url
+  // xử lý phần chức năng lấy comment từ api
   getAllComment(animeId).then((data) => {
     let customHtml = "";
     data.forEach((comment) => {
@@ -82,6 +85,7 @@ window.onload = () => {
       document.querySelector(".list_comment").innerHTML = customHtml;
     });
   });
+  // end
 };
 
 // xử lý sự kiện btn next
@@ -89,25 +93,26 @@ const handleBtnNext = (currentEp, animeId) => {
   const nextEp = Number.parseInt(currentEp) + 1;
   const maxEp = document.querySelectorAll(".epsoidesss").length;
   if (nextEp > maxEp) {
-    alert("Quay xe đi e êy");
+    alert("Hết phim rồi");
     return;
   }
   window.location.href = `./watching.html?animeId=${animeId}&tap=${nextEp}`;
 };
+// end
 
+// xử lý chức năng comment
 const handleApi = async (animeId) => {
   const response = await fetch(`${HOST_NAME}/anime/${animeId}/episodeList`);
   const data = await response.json();
   return data;
 };
 
-
 const handleSubmitComment = async (e, animeId) => {
   e.preventDefault();
   const formData = new FormData(e.currentTarget);
   const comment = formData.get("comment");
   if (!comment) {
-    alert("Vui lòng nhập đầy đủ thông tin!");
+    alert("Bình luận trống!");
     return;
   }
   try {
@@ -166,3 +171,4 @@ const loadUserByUrl = async (url) => {
   const data = await response.json();
   return data;
 };
+// end
