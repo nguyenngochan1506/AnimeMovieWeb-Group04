@@ -23,4 +23,4 @@
 </tr>
 </tbody>
 </table>
-<p>Đường dẫn: <a href="https://nguyenngochan1506.github.io/AnimeMovieWeb-Group04/"> anime-movie-web</a></p>
+<p>Đường dẫn: <a href="https://nguyenngochan1506.github.io/AnimeMovieWeb-Group04/home.html"> anime-movie-web</a></p>
