@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fate Stay Night: Unlimited Blade</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Css file -->
+  <link rel="stylesheet" href="./bootstrap-5.3.2-dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/anime-details.css" />
+  <link rel="stylesheet" href="./css/contact.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body class="custom-bg">
+  <!-- Header Start -->
+  <header class="container-fluid p-1 text-bg-dark position-fixed z-3 top-0" id="header-include"">
+    </header>
+    <!-- Header End -->
+
+    <!-- Anime Section Begin -->
+    <section class=" anime-details">
+    <div class="container">
+      <div class="anime__details__content mt-5">
+        <div class="row">
+          <div class="col-lg-4 col-md-5 d-flex justify-content-center align-items-start mb-5">
+            <div class="anime__image-box d-flex">
+              <img src="" alt="" />
+              <div class="d-flex justify-content-between anime__more-info p-3">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 col-md-7 anime__details__text">
+            <div class="anime__details__title">
+              <h1 class="fw-bold">
+                <!-- Big header -->
+                <div class="spinner-border text-danger" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+              </h1>
+              <span>
+                <!-- Small header -->
+              </span>
+            </div>
+            <p class="lh-1.5 mt-3">
+              <!-- Description -->
+            </p>
+            <div class="anime__details__widget">
+              <div class="row">
+                <div class="col-lg-6 col-md-6">
+                  <ul>
+                    <li><span>Type:</span> TV Series</li>
+                    <li><span>Release Year:</span><span class="releaseYear"></span></li>
+                    <li><span>Status:</span> On going</li>
+                    <li>
+                      <span>Genres:</span> Action, Adventure, Fantasy, Magic
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                  <ul>
+                    <li><span>Duration:</span> 24 minutes / episode</li>
+                    <li><span>Quality:</span> HD</li>
+                    <li><span>Views:</span> <span class="view"></span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="anime__details__btn">
+              <a href="#" class="follow-btn btn btn-danger round-3 mr-5">
+                <!-- add to favorites button -->
+                <i class="fa fa-heart-o"></i> Add to Favorites
+              </a>
+              <a href="#" class="watch-btn btn btn-danger round-3"><span id="btn-xem-ngay">Watch Now</span> <i
+                  class="fa fa-angle-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-md-8 mx-auto">
+          <div class="section-title mt-5 mb-5">
+            <h4>Comments</h4>
+          </div>
+          <div class="anime__details__review">
+            <!-- comment -->
+            <div class="spinner-border text-danger" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+        </div>
+        <div class="anime__details__form">
+          <div class="section-title mt-3 mb-3">
+            <h4>Your comment</h4>
+          </div>
+          <form id="my-form-comment">
+            <textarea name="comment" placeholder="Share your thoughts and reviews about the movie here..."
+              class="anime__details-comment mb-3 p-3" maxlength="300" rows="4"></textarea>
+            <button type="submit" class="btn btn-danger">
+              <i class="fa fa-location-arrow"></i> Comment
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    </div>
+    </section>
+    <!-- Anime Section End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid" id="footer-include">
+    </div>
+    <!-- Footer End -->
+    <script>
+      // include header and footer
+      const header = document.querySelector('#header-include');
+      const footer = document.querySelector('#footer-include');
+      fetch('./component/nav.html').then(response => response.text()).then(html => header.innerHTML = html)
+      fetch('./component/footer.html').then(response => response.text()).then(html => footer.innerHTML = html)
+    </script>
+    <script src="./js/contact.js" type="module"></script>
+    <script type="module" src="./js/anime-detail.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"></script>
+
+</body>
+
+</html>

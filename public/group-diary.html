@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Diary</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/group-diary.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body class="my-custom-bg">
+    <!-- Header -->
+    <header class="container-fluid p-1 text-bg-dark position-fixed z-3 top-0" id="header-include"">
+     </header>
+    
+     <!--content -->
+     <div class=" row my-content">
+        <div class="col-3">
+            <div class="d-flex flex-column flex-shrink-0 p-3 text-white custom-sidebar">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <span class="fs-4 fw-bold">Daily works</span>
+                </a>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link week-link text-white my-active" id="week-5" aria-current="page">
+                            Week 5
+                        </a>
+                        <a href="#" class="nav-link week-link text-white " id="week-6" aria-current="page">
+                            Week 6
+                        </a>
+                        <a href="#" class="nav-link week-link text-white " id="week-7" aria-current="page">
+                            Week 7
+                        </a>
+                        <a href="#" class="nav-link week-link text-white " id="week-8" aria-current="page">
+                            Week 8
+                        </a>
+                        <a href="#" class="nav-link week-link text-white " id="week-9" aria-current="page">
+                            Week 9
+                        </a>
+                        <a href="#" class="nav-link week-link text-white " id="week-10" aria-current="page">
+                            Week 10
+                        </a>
+                        <a href="#" class="nav-link week-link text-white " id="week-99" aria-current="page">
+                            Summary
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-8 my-table">
+            <h1 class="text-white text-center mt-5">Group-04 Diary</h1>
+            <h4 class="text-white text-center mt-0 mb-4" id="week-title">(Week-5)</h4>
+            <table class="table table-dark table-hover">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Work</th>
+                        <th>Implementer</th>
+                        <th>Start day</th>
+                        <th>End day</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>#1</th>
+                        <td>Group Diary</td>
+                        <td>Nguyễn Ngọc Hân</td>
+                        <td>28-11-2023</td>
+                        <td>30-11-2023</td>
+                        <td>Complete</td>
+                    </tr>
+                    <tr>
+                        <th>#2</th>
+                        <td>About Page interface</td>
+                        <td>Lê Bá Khánh Duy</td>
+                        <td>28-11-2023</td>
+                        <td>30-11-2023</td>
+                        <td>Complete</td>
+                    </tr>
+                    <tr>
+                        <th>#3</th>
+                        <td>Admin Home Page interface</td>
+                        <td>Hoàng Lê Nguyên Mạnh</td>
+                        <td>28-11-2023</td>
+                        <td>03-12-2023</td>
+                        <td>Complete</td>
+                    </tr>
+                    <tr>
+                        <th>#4</th>
+                        <td>Category page interface</td>
+                        <td>Đăng Văn Trung</td>
+                        <td>28-11-2023</td>
+                        <td>03-12-2023</td>
+                        <td>Complete</td>
+                    </tr>
+                    <tr>
+                        <th>#5</th>
+                        <td>Admin User Manager page interface</td>
+                        <td>Nguyễn Vũ Bảo</td>
+                        <td>28-11-2023</td>
+                        <td>05-12-2023</td>
+                        <td>Complete</td>
+                    </tr>
+                </tbody>
+              </table>
+              <div class="my-file text-white">
+                
+              </div>
+        </div>
+
+        <!-- footer -->
+        <div class=" container-fluid" id="footer-include">
+        </div>
+        <script>
+            // include header and footer
+            const header = document.querySelector('#header-include');
+            const footer = document.querySelector('#footer-include');
+            fetch('./component/nav.html').then(response => response.text()).then(html => header.innerHTML = html)
+            fetch('./component/footer.html').then(response => response.text()).then(html => footer.innerHTML = html)
+        </script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+        <script src="./js/group-diary.js"></script>
+        <script src="./js/contact.js" type="module"></script>
+</body>
+
+</html>

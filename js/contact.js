@@ -122,7 +122,7 @@ const showProfile = () => {
                       <img src="${user.avatar}" alt="mdo" width="32" height="32" class="rounded-circle">
                     </a>
                     <ul class="dropdown-menu text-small shadow" >
-                    <li><span class="dropdown-item">Xin Chào: <strong>${user.userName}</strong></span></li>
+                    <li><span class="dropdown-item">Hello: <strong>${user.userName}</strong></span></li>
                     <hr/>
                       <li><a class="dropdown-item" href="./profile.html">Information</a></li>
                       <li><a class="dropdown-item" href="./anime-favorite.html">Favorites</a></li>

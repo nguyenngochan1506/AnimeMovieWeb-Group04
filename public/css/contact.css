@@ -1,0 +1,81 @@
+#contact {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.close-contact {
+    visibility: hidden;
+    scale: 0.01;
+}
+
+#contact .content {
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 70vh;
+    width: 30vw;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 1rem;
+}
+
+#contact .content .title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#contact .content #email {
+    width: 90%;
+    border-radius: 5px;
+}
+
+#contact .content #infor {
+    width: 90%;
+    resize: none;
+    border-radius: 5px;
+}
+
+#contact .content button {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: none;
+    background-color: #9df152;
+}
+
+#contact .content button:active {
+    transform: scale(0.9);
+}
+
+.icon-close {
+    position: absolute;
+    font-size: 2rem;
+    top: 0.5rem;
+    right: 0.5rem;
+    cursor: pointer;
+}
+.resutl-search ul{
+    list-style: none;
+    padding-left: 5%;
+}
+.resutl-search{
+    color: #fff;
+    background-color: #1E293B;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 100%;
+    top: 120%;
+    border-radius: 0.3rem;
+    max-height: 400px;
+    overflow-y: auto;
+}
+.resutl-search-item{
+    margin: 0.5rem 0;
+}

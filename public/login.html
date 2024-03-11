@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/login.css" />
+    <link
+      rel="stylesheet"
+      href="./bootstrap-5.3.2-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  </head>
+  <body class="body-bg">
+    <!-- header -->
+    <header class="container-fluid p-1 text-bg-dark position-fixed z-3 top-0" id="header-include"">
+    </header>
+
+    <!-- login -->
+    <div class="a">
+      <div class="container-login">
+        <div class="login-header">
+          <div class="login-header-left">
+            <p>Sign In</p>
+          </div>
+          <div class="login-header-right"></div>
+        </div>
+        <div class="container-login-main">
+          <form class="login" id="my-form">
+            <div>
+              <h6>Username</h6>
+              <input id="ten-dang-nhap"
+                type="text"
+                style="color: white; padding-left: 20px"
+                placeholder="Enter your email"
+              />
+              <div>
+                <h6>Password</h6>
+                <input id="mat-khau"
+                  style="color: white; padding-left: 20px"
+                  type="password"
+                  placeholder="Enter your password"
+                />
+              </div>
+            </div>
+            <div class="btn-group">
+              <div class="text-nowrap">
+                <button type="submit" id="btn-login" class="btn btn-danger">Sign In</button>
+                <a class="text-nowrap" style="color: white; text-decoration: none" href="./forgot-password.html"
+                  >Forgot Password ?</a
+                >
+              </div>
+            </div>
+            <div class="text-center mt-1">
+              <a href="./signup.html" class="btn btn-success sign-up-btn">Sign Up</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <div class="container-fluid" id="footer-include">
+    </div>
+    <script>
+      // include header and footer
+      const header = document.querySelector('#header-include');
+      const footer = document.querySelector('#footer-include');
+      fetch('./component/nav.html').then(response => response.text()).then(html => header.innerHTML = html)
+            fetch('./component/footer.html').then(response => response.text()).then(html => footer.innerHTML = html)
+  </script>
+  <script type="module" src="./js/login.js"></script>
+  <script src="./js/contact.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+* {
+  font-family: Mulish, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+}
+.custom-bg {
+  background: #1e293b;
+  color: #fff;
+}
+.anime-details {
+  padding-top: 72px;
+}
+.anime__details__content {
+  gap: 30px;
+}
+.anime__image-box {
+  position: relative;
+}
+.anime__image-box img {
+  border-radius: 5px;
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+.anime__more-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.anime-icon {
+  background-color: #333;
+  opacity: 0.8;
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+.follow-btn {
+  margin-right: 12px;
+}
+.follow-btn,
+.watch-btn {
+  display: inline-block;
+}
+.anime__review__item {
+  column-gap: 15px;
+}
+.anime__review__item__pic img {
+  border-radius: 5px;
+}
+.anime__review__item__text p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+.anime__details-comment {
+  width: 100%;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+@media (max-width: 1024px) {
+  .anime-details {
+    padding-top: 25%;
+  }
+}
+@media (max-width: 576px) {
+  .anime-details {
+    padding-top: 50%;
+  }
+}

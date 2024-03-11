@@ -1,0 +1,64 @@
+* {
+  font-family: Nunito, ui-sans-serif, system-ui, -apple-system,
+      BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+      sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+      "Noto Color Emoji";
+}
+
+.custom-bg {
+  background: #1e293b;
+  color: #fff;
+}
+
+.my-content{
+  padding-top: 72px;
+}
+
+.product__pagination a {
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #dc3545;
+}
+.current-page {
+  background-color: white;
+  font-weight: bold;
+}  
+
+.thumb-form-add{
+  color: #000;
+  position: fixed;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  height: 100vh;
+}
+.my-form-add{
+  background-color: #fff;
+  position: absolute;
+  width: 80%;
+  height: max-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem 2rem 1rem 2rem;
+  border-radius: 7px;
+}
+
+.admin-items{
+  height: 150px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 100ms;
+}
+.admin-items:hover{
+  transform:scale(1.1);
+}
+.admin-items:nth-child(1){
+  background: linear-gradient(90deg,#FFB75E, #ED8F03);
+}
+.admin-items:nth-child(2){
+  background: linear-gradient(90deg,#457fca, #5691c8);
+}
+.admin-items:nth-child(3){
+  background: linear-gradient(90deg,#8E0E00, #1F1C18);
+}
